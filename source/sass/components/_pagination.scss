@@ -1,0 +1,40 @@
+div.pagination {
+  margin: 20px 0;
+  ul {
+    @extend .no-list;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    li {
+      a {
+        @extend .flex;
+        width: 30px;
+        height: 30px;
+        color: $c-gray-400;
+        font-size: var(--fs-2xs);
+        background-color: $c-white;
+        border-radius: 5px;
+        svg {
+          height: 20px;
+          path {
+            stroke-width: 1.5;
+            stroke: $c-gray-400;
+            stroke-linecap: round;
+          }
+        }
+      }
+      &.active,
+      &:hover {
+        a {
+          color: $c-white;
+          background-color: $c-primary-200;
+          svg {
+            path {
+              stroke: $c-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

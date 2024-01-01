@@ -1,0 +1,111 @@
+// Color
+$c-black: #000000;
+$c-white: #ffffff;
+$c-gray-900: #101828;
+$c-gray-800: #1d2939;
+$c-gray-700: #344054;
+$c-gray-600: #475467;
+$c-gray-500: #667085;
+$c-gray-400: #98a2b3;
+$c-gray-300: #d0d5dd;
+$c-gray-200: #eaecf0;
+$c-gray-100: #f2f4f7;
+$c-gray-50: #f9fafb;
+$c-gray-25: #fcfcfd;
+$c-info-200: #4172c5;
+$c-info-100: #4787f3;
+$c-info-50: #91b6f4;
+$c-info-25: #f3f3f3;
+$c-error-200: #d92d20;
+$c-error-100: #f93232;
+$c-error-50: #ffa4a3;
+$c-error-25: #ffe6e3;
+$c-warning-200: #d6900a;
+$c-warning-100: #ffb82e;
+$c-warning-50: #ffe19a;
+$c-warning-25: #fff7e3;
+$c-success-200: #109356;
+$c-success-100: #12b76a;
+$c-success-50: #a6f4c5;
+$c-success-25: #f6fef9;
+
+$c-primary-200: #009900;
+$c-primary-100: #0967ad;
+$c-primary-50: #1087c9;
+$c-primary-25: #5ab8e7;
+
+$c-brown: #643a18;
+
+$c-facebook: #1877f2;
+$c-instagram: #845ddb;
+$c-twitter: #00acee;
+$c-youtube: #c4302b;
+$c-linkedin: #0077b5;
+$c-whatsapp: #25d366;
+$c-viber: #675ca8;
+
+$c-pdf: #bd0f17;
+$c-word: #1b56b4;
+$c-excel: #18753f;
+$c-powerpoint: #bc3922;
+$c-archive: #fdd977;
+
+:root {
+  // Font family
+  --ff-primary: 'helvetica';
+  --ff-secondary: 'helvetica-caps';
+  // Font size
+  --fs-2xs: 10px;
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 24px;
+  --fs-2xl: 42px;
+  --fs-3xl: 64px;
+  // Line height
+  --lh-xs: 110%;
+  --lh-sm: 120%;
+  --lh-md: 140%;
+  // Box Shadow
+  --bs-sm: 0px 10px 20px #{$c-black}05;
+  --bs-md: 0px 10px 15px -5px #{$c-black}10, 0px 5px 5px #{$c-black}05;
+  --bs-lg: 0px 25px 50px -10px #{$c-black}20;
+  --bs-xl: 0px 30px 65px -10px #{$c-black}15;
+  // Border radius
+  --br-sm: 5px;
+  --br-tooltip: 8px;
+  --br-md: 10px;
+  --br-lg: 20px;
+  --br-half: 50%;
+  // Form
+  --form-height: 50px;
+  --form-font-size: var(--fs-sm);
+  // Button
+  --button-padding-x: 30px;
+  --button-padding-alt: 25px;
+  --button-border: 1px solid #{$c-primary-200};
+  --button-icon-margin: 10px;
+  --button-outline-size: 1px;
+  --button-outline-offset: 2px;
+  // Input
+  --input-placeholder: #{$c-gray-400};
+  --input-background: #{$c-white};
+  --input-background-hover: #{$c-white};
+  --input-background-active: #{$c-white};
+  --input-background-disabled: #{$c-gray-50};
+  --input-border: 1px solid #{$c-gray-300};
+  --input-border-hover: #{$c-gray-400};
+  --input-border-active: #{$c-gray-400};
+  --input-border-disabled: #{$c-gray-100};
+  --input-border-radius: var(--br-sm);
+  // Input Text
+  --input-text-bottom-border: 1px solid #{$c-gray-300};
+  // Input Checker
+  --checker-size-sm: 16px;
+  --checker-size-md: 20px;
+  --checker-color: #{$c-primary-200};
+  --checker-color-disabled: #{$c-gray-200};
+  --checkbox-br-sm: 4px;
+  --checkbox-br-md: 6px;
+}

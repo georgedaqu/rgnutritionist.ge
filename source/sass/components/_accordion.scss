@@ -1,0 +1,52 @@
+.accordion_wrap {
+	ul {
+		@extend .no-list;
+		li {
+			.accordion_question {
+				a {
+					display: flex;
+					gap: 10px;
+					strong {
+						flex: 1;
+						color: $c-gray-500;
+						font-size: var(--fs-lg);
+						font-family: var(--ff-secondary);
+						text-transform: uppercase;
+					}
+					span {
+						width: 15px;
+						height: 15px;
+						&:before,
+						&:after {
+							@extend .trans-4;
+							display: block;
+							position: absolute;
+							content: '';
+							width: 100%;
+							height: 1px;
+							left: 0;
+							top: 10px;
+							background-color: $c-primary-200;
+						}
+						&:after {
+							transform: rotate(90deg);
+						}
+					}
+				}
+				&.open {
+					a {
+						span {
+							&:after {
+								transform: rotate(0deg);
+							}
+						}
+					}
+				}
+			}
+			.accordion_content {
+				display: none;
+				transition: none;
+			}
+		}
+	}
+}

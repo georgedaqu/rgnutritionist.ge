@@ -1,0 +1,46 @@
+{
+	"name": "default",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"start": "./node_modules/.bin/gulp",
+		"build": "./node_modules/.bin/gulp build",
+		"dev": "NODE_ENV=development ./node_modules/.bin/gulp"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.23.7",
+		"@babel/preset-env": "^7.23.7",
+		"@babel/register": "^7.23.7",
+		"babel-loader": "^9.1.3",
+		"browser-sync": "^3.0.2",
+		"fs-extra": "^11.2.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^9.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-cli": "^2.3.0",
+		"gulp-sass": "^5.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-util": "^3.0.8",
+		"node-notifier": "^10.0.1",
+		"webpack": "^5.89.0"
+	},
+	"dependencies": {
+		"bourbon": "^7.3.0",
+		"cropperjs": "^1.6.1",
+		"fullcalendar": "^6.1.10",
+		"jquery": "^3.7.1",
+		"jquery-ui": "^1.13.2",
+		"magnific-popup": "^1.1.0",
+		"moment": "^2.30.1",
+		"node-sass": "^9.0.0",
+		"npm-check-updates": "^16.14.12",
+		"select2": "^4.1.0-rc.0",
+		"simplebar": "^6.2.5",
+		"slick-carousel": "^1.8.1"
+	}
+}

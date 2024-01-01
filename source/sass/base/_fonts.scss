@@ -1,0 +1,9 @@
+@include get-font('helvetica', '../fonts/helvetica-light-300', 300, normal, woff2);
+@include get-font('helvetica', '../fonts/helvetica-light-italic-300', 300, italic, woff2);
+@include get-font('helvetica', '../fonts/helvetica-regular-400', 400, normal, woff2);
+@include get-font('helvetica', '../fonts/helvetica-italic-400', 400, italic, woff2);
+@include get-font('helvetica', '../fonts/helvetica-bold-700', 700, normal, woff2);
+@include get-font('helvetica', '../fonts/helvetica-bold-italic-700', 700, italic, woff2);
+@include get-font('helvetica-caps', '../fonts/helvetica-caps-light-300', 300, normal, woff2);
+@include get-font('helvetica-caps', '../fonts/helvetica-caps-regular-400', 400, normal, woff2);
+@include get-font('helvetica-caps', '../fonts/helvetica-caps-bold-700', 700, normal, woff2);

@@ -1,0 +1,195 @@
+// Map
+.map {
+  width: 100%;
+  height: 400px;
+  .gm-style {
+    div {
+      position: static;
+    }
+  }
+}
+// For SVG stroke animation
+.dashed {
+  fill: none;
+  path {
+    @extend .trans-4;
+  }
+  &:hover {
+    path {
+      stroke-dashoffset: 0 !important;
+    }
+  }
+}
+// Socials
+.socials {
+  ul {
+    @extend .no-list;
+    display: flex;
+    gap: 4px;
+    li {
+      a {
+        @extend .flex;
+        width: 30px;
+        height: 30px;
+        svg {
+          width: 24px;
+          path {
+            fill: $c-gray-700;
+          }
+        }
+        &:hover {
+          svg {
+            path {
+              fill: $c-primary-200;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Container
+.container {
+  width: 1420px;
+  margin: 0 auto;
+  @media (max-width: 1680px) {
+    width: 1300px;
+  }
+  @media (max-width: 1440px) {
+    width: 1240px;
+  }
+  @media (max-width: 1366px) {
+    width: 1120px;
+  }
+  @media (max-width: 1280px) {
+    width: 1005px;
+  }
+  @media (max-width: 1024px) {
+    width: auto;
+    margin: 0 20px;
+  }
+}
+.form-item {
+  .input-wrap {
+    &.checker {
+      display: flex;
+      gap: 10px;
+      label {
+        margin: 0;
+      }
+    }
+  }
+  &.error {
+    label {
+      color: $c-error-100;
+    }
+    .input-wrap {
+      input[type='text'],
+      input[type='date'],
+      input[type='datetime'],
+      input[type='datetime-local'],
+      input[type='email'],
+      input[type='month'],
+      input[type='number'],
+      input[type='password'],
+      input[type='range'],
+      input[type='search'],
+      input[type='tel'],
+      input[type='time'],
+      input[type='url'],
+      input[type='week'],
+      textarea {
+        //color: $c-error-100;
+        border-color: $c-error-100;
+        &::placeholder {
+          color: $c-error-100;
+        }
+        &.underline {
+          border-bottom: 1px solid $c-error-100;
+        }
+        & + svg {
+          path {
+            stroke: $c-error-100;
+          }
+        }
+      }
+      .artform-wrap {
+        span {
+          border-color: $c-error-200;
+        }
+        input {
+          &[type='radio'] {
+            & + span {
+              &:before {
+                background-color: $c-error-200;
+                border-color: $c-error-200;
+              }
+            }
+            &:hover {
+              & + span {
+                border-color: $c-error-200;
+                background-color: $c-error-25;
+              }
+            }
+          }
+          &[type='checkbox'] {
+            &:hover {
+              & + span {
+                background-color: $c-error-25;
+              }
+            }
+            &:checked {
+              & + span {
+                background-color: $c-error-200;
+                border-color: transparent;
+                &:before {
+                  opacity: 1;
+                }
+              }
+              &:hover {
+                & + span {
+                  border-color: $c-error-200;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .error-msg {
+      display: flex;
+    }
+  }
+}
+.error-msg {
+  display: none;
+  gap: 5px;
+  margin-top: 10px;
+  svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fs-xs);
+    fill: none;
+    width: var(--fs-xs);
+    height: var(--fs-xs);
+    margin-top: 2px;
+    border-radius: var(--br-half);
+    border: 1px solid $c-error-100;
+    path {
+      width: 16px;
+      stroke-width: 1.5;
+      stroke: $c-error-200;
+      stroke-linecap: round;
+      transform: scale(0.7);
+      transform-origin: 50% 50%;
+    }
+  }
+  span {
+    font-size: var(--fs-xs);
+    color: $c-error-100;
+    font-weight: 400;
+    line-height: 1.4;
+    align-self: center;
+  }
+}

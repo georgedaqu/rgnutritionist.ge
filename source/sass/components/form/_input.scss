@@ -1,0 +1,131 @@
+.input-wrap {
+  input[type='text'],
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='email'],
+  input[type='month'],
+  input[type='number'],
+  input[type='password'],
+  input[type='range'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='time'],
+  input[type='url'],
+  input[type='week'],
+  textarea {
+    width: 100%;
+    height: var(--form-height);
+    font-size: var(--form-font-size);
+    border-radius: var(--input-border-radius);
+    border: var(--input-border);
+    padding: 0 16px;
+    &::placeholder {
+      font-size: var(--form-font-size);
+      font-weight: 400;
+      color: var(--input-placeholder);
+    }
+    &:hover {
+      border-color: var(--input-border-hover);
+      & + svg {
+        path {
+          stroke: $c-gray-500;
+        }
+      }
+    }
+    &:focus {
+      border-color: var(--input-border-active);
+      box-shadow: 0px 10px 20px rgba($c-black, 0.05);
+      & + svg {
+        path {
+          stroke: $c-gray-500;
+        }
+      }
+    }
+    &:disabled {
+      background-color: var(--input-background-disabled);
+      border-color: var(--input-border-disabled);
+      &::placeholder {
+        color: $c-gray-300;
+      }
+      & + svg {
+        path {
+          stroke: $c-gray-300;
+        }
+      }
+    }
+    &.underline {
+      border: unset;
+      padding: 0;
+      border-radius: 0;
+      border-bottom: var(--input-text-bottom-border);
+      box-shadow: none;
+      &:focus {
+        border-bottom-color: var(--input-border-active);
+      }
+      &:disabled {
+        color: $c-gray-200;
+        background-color: transparent;
+        border-color: var(--input-border-disabled);
+        &::placeholder {
+          color: $c-gray-200;
+        }
+        & + svg {
+          path {
+            stroke: $c-gray-200;
+          }
+        }
+      }
+    }
+    & + svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  textarea {
+    height: 150px;
+    padding: 16px;
+    vertical-align: top;
+  }
+  label {
+    margin: 0 0 8px 0;
+  }
+  svg {
+    width: 20px;
+    path {
+      stroke-width: 1.5;
+      stroke: $c-gray-400;
+      stroke-linecap: round;
+    }
+  }
+  &.icon-right {
+    input {
+      padding: 0 44px 0 16px;
+      & + svg {
+        right: 16px;
+      }
+      &.underline {
+        padding-right: 28px;
+        & + svg {
+          right: 0;
+        }
+      }
+    }
+  }
+  &.icon-left {
+    input {
+      padding: 0 16px 0 44px;
+      & + svg {
+        left: 16px;
+      }
+      &.underline {
+        padding-left: 28px;
+        & + svg {
+          left: 0;
+        }
+      }
+    }
+  }
+}

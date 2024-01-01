@@ -1,0 +1,33 @@
+.playground {
+  padding: 50px 0;
+  .container {
+    .playground-section {
+      margin-bottom: 50px;
+      padding: 50px;
+      border: 1px solid $c-gray-100;
+      border-radius: var(--br-sm);
+      .section-title {
+        color: $c-primary-200;
+        font-size: var(--fs-2xl);
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .playground-sub-section {
+        margin-bottom: 50px;
+        .sub-section-title {
+          color: $c-gray-400;
+          font-weight: 400;
+          text-align: center;
+        }
+        .playground-body {
+          .playground-form-items {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}
