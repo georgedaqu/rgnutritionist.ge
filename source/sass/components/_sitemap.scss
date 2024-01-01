@@ -1,56 +1,55 @@
 .sitemap {
-	> ul {
-		@extend .no-list;
-		column-count: 5;
-		@media (max-width: 992px) {
-			column-count: 3;
-		}
-		@media (max-width: 768px) {
-			column-count: 2;
-		}
-		@media (max-width: 576px) {
-			column-count: 1;
-		}
-		> li {
-			margin-bottom: 10px;
-			> a {
-				display: block;
-				color: $c-primary-200;
-				font-size: var(--fs-base);
-				font-family: var(--ff-primary);
-				font-weight: 700;
-				text-transform: uppercase;
-			}
-			&:hover {
-				> a {
-					color: $c-primary-200;
-				}
-			}
-			ul {
-				margin-left: 20px;
-				margin-top: 5px;
-				li {
-					margin-bottom: 10px;
-					a {
-						display: flex;
-						color: $c-gray-400;
-						&:before {
-							display: block;
-							content: '';
-							width: 10px;
-							height: 1px;
-							margin-top: 10px;
-							margin-right: 10px;
-							background-color: $c-gray-200;
-						}
-					}
-					&:hover {
-						> a {
-							color: $c-primary-200;
-						}
-					}
-				}
-			}
-		}
-	}
+  > ul {
+    @extend .no-list;
+    column-count: 5;
+    @media (max-width: 992px) {
+      column-count: 3;
+    }
+    @media (max-width: 768px) {
+      column-count: 2;
+    }
+    @media (max-width: 576px) {
+      column-count: 1;
+    }
+    > li {
+      margin-bottom: 10px;
+      > a {
+        display: block;
+        color: $c-primary-200;
+        font-size: var(--fs-base);
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &:hover {
+        > a {
+          color: $c-primary-200;
+        }
+      }
+      ul {
+        margin-left: 20px;
+        margin-top: 5px;
+        li {
+          margin-bottom: 10px;
+          a {
+            display: flex;
+            color: $c-gray-400;
+            &:before {
+              display: block;
+              content: '';
+              width: 10px;
+              height: 1px;
+              margin-top: 10px;
+              margin-right: 10px;
+              background-color: $c-gray-200;
+            }
+          }
+          &:hover {
+            > a {
+              color: $c-primary-200;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -2,10 +2,12 @@ html,
 body {
   color: $c-gray-700;
   font-size: var(--fs-md);
-  font-family: var(--ff-primary);
+  font-family: var(--ff-georgian), var(--ff-international);
   font-weight: 400;
   line-height: var(--lh-md);
   * {
+    color: $c-gray-700;
+    font-family: var(--ff-georgian), var(--ff-international);
     line-height: var(--lh-md);
   }
 }

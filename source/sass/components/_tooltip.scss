@@ -1,70 +1,69 @@
 .tooltip {
-	position: relative;
-	display: inline-block;
-	&:hover {
-		.tooltiptext {
-			visibility: visible;
-			opacity: 1;
-		}
-	}
-	.tooltiptext {
-		min-width: 100px;
-		visibility: hidden;
-		position: absolute;
-		opacity: 0;
-		font-family: var(--ff-primary);
-		font-size: var(--fs-xs);
-		font-weight: 400;
-		text-align: center;
-		border-radius: var(--br-tooltip);
-		padding: 8px 12px;
-		white-space: nowrap;
-		bottom: 125%;
-		left: 50%;
-		margin-left: -60px;
-		z-index: 1;
-		transition: opacity 0.3s;
-		&:after {
-			content: '';
-			position: absolute;
-			top: 80%;
-			margin-left: -5px;
-			border-width: 5px;
-			width: 12px;
-			height: 12px;
-			transform: rotate(45deg);
-			left: 50%;
-			border-style: solid;
-		}
-		&.center {
-			&::after {
-				left: 50%;
-			}
-		}
-		&.left {
-			&::after {
-				left: 20%;
-			}
-		}
-		&.right {
-			&::after {
-				left: 80%;
-			}
-		}
-		&.white {
-			background-color: $c-white;
-			color: $c-gray-600;
-			box-shadow: -2px 2px 24px 4px rgba(0, 0, 0, 0.1);
-			&::after {
-				border-color: $c-white;
-			}
-		}
-		&.black {
-			background-color: $c-gray-800;
-			color: $c-white;
-			&::after {
-				border-color: $c-gray-800;
-			}
-		}
-	}
+  position: relative;
+  display: inline-block;
+  &:hover {
+    .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .tooltiptext {
+    min-width: 100px;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    font-size: var(--fs-xs);
+    font-weight: 400;
+    text-align: center;
+    border-radius: var(--br-tooltip);
+    padding: 8px 12px;
+    white-space: nowrap;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    z-index: 1;
+    transition: opacity 0.3s;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 80%;
+      margin-left: -5px;
+      border-width: 5px;
+      width: 12px;
+      height: 12px;
+      transform: rotate(45deg);
+      left: 50%;
+      border-style: solid;
+    }
+    &.center {
+      &::after {
+        left: 50%;
+      }
+    }
+    &.left {
+      &::after {
+        left: 20%;
+      }
+    }
+    &.right {
+      &::after {
+        left: 80%;
+      }
+    }
+    &.white {
+      background-color: $c-white;
+      color: $c-gray-600;
+      box-shadow: -2px 2px 24px 4px rgba(0, 0, 0, 0.1);
+      &::after {
+        border-color: $c-white;
+      }
+    }
+    &.black {
+      background-color: $c-gray-800;
+      color: $c-white;
+      &::after {
+        border-color: $c-gray-800;
+      }
+    }
+  }
 }

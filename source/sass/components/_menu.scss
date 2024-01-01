@@ -11,12 +11,11 @@
       padding: 10px 0;
       > a {
         @extend .trans-4;
+        @extend .sf;
         display: block;
         color: $c-gray-400;
         font-size: var(--fs-md);
-        font-family: var(--ff-secondary);
         font-weight: 700;
-        text-transform: uppercase;
       }
       &.current_page_item,
       &.current-menu-ancestor,
