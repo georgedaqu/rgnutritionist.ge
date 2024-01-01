@@ -1,15 +1,10 @@
-@include get-font('sf-pro', '../fonts/sf-pro-rounded-ultralight-100', 100, normal, woff2);
-@include get-font('sf-pro', '../fonts/sf-pro-rounded-thin-200', 200, normal, woff2);
-@include get-font('sf-pro', '../fonts/sf-pro-rounded-light-300', 300, normal, woff2);
-@include get-font('sf-pro', '../fonts/sf-pro-rounded-regular-400', 400, normal, woff2);
-@include get-font('sf-pro', '../fonts/sf-pro-rounded-medium-500', 500, normal, woff2);
-@include get-font('sf-pro', '../fonts/sf-pro-rounded-semibold-600', 600, normal, woff2);
-@include get-font('sf-pro', '../fonts/sf-pro-rounded-bold-700', 700, normal, woff2);
-@include get-font('sf-pro', '../fonts/sf-pro-rounded-heavy-800', 800, normal, woff2);
-@include get-font('sf-pro', '../fonts/sf-pro-rounded-black-900', 900, normal, woff2);
-
 @font-face {
   font-family: 'sf-georgian';
   src: url('../fonts/sf-rounded-georgian.woff2') format('truetype-variations');
+  font-weight: 1 999;
+}
+@font-face {
+  font-family: 'sf-pro';
+  src: url('../fonts/sf-pro-rounded.woff2') format('truetype-variations');
   font-weight: 1 999;
 }
