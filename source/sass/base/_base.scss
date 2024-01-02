@@ -187,3 +187,17 @@
     align-self: center;
   }
 }
+.curves {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  user-select: none;
+  &.top {
+    top: 0;
+    transform: translateY(calc(-100% + 2px));
+  }
+  &.bot {
+    bottom: 0;
+    transform: translateY(calc(100% - 2px));
+  }
+}
