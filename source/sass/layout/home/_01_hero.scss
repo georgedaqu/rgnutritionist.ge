@@ -1,37 +1,71 @@
 .hero {
-  height: 760px;
   margin: 5vw 0;
-  padding: 1px 0;
+  padding-top: 40%;
   background-color: $c-gray-25;
   .hero_content {
     position: absolute;
-    width: 550px;
+    width: 30%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -100%);
-    padding: 1px 0;
     z-index: 3;
     figure {
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
+      margin-bottom: 7%;
+      img {
+        width: 59%;
+      }
     }
     .text {
       color: $c-gray-500;
-      font-size: var(--fs-xl);
+      font-size: 1vw;
       text-align: center;
       font-weight: 350;
     }
   }
   .vegan {
-    display: none;
     position: absolute;
     z-index: 2;
     &.one {
-      display: block;
+      width: 20.6%;
       left: 16%;
       top: 8%;
-      width: 20.6%;
+    }
+    &.two {
+      width: 10.5%;
+      left: 4%;
+      top: 49%;
+    }
+    &.three {
+      width: 12.5%;
+      left: 23%;
+      top: 55%;
+    }
+    &.four {
+      width: 9%;
+      left: 59%;
+      top: 3%;
+    }
+    &.five {
+      width: 14%;
+      left: 77%;
+      top: 10%;
+    }
+    &.six {
+      width: 11%;
+      left: 40%;
+      top: 66%;
+    }
+    &.seven {
+      width: 25%;
+      left: 60%;
+      top: 41%;
+    }
+    &.eight {
+      width: 8%;
+      left: 84%;
+      top: 58%;
     }
   }
 }
