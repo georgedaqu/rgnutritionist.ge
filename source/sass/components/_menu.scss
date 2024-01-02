@@ -10,6 +10,13 @@
   transform: translateX(-100%);
   z-index: 999;
   background-color: $c-gray-50;
+  @media (max-width: 1024px) {
+    width: 50vw;
+    padding: 30px;
+  }
+  @media (max-width: 576px) {
+    width: 80vw;
+  }
   &.active {
     transform: translateX(0);
     box-shadow: 0 0 30px rgba($c-black, 0.1);
@@ -21,6 +28,12 @@
     top: 40px;
     right: 40px;
     cursor: pointer;
+    @media (max-width: 1280px) {
+      width: 26px;
+      height: 26px;
+      top: 30px;
+      right: 30px;
+    }
     &:before,
     &:after {
       display: block;

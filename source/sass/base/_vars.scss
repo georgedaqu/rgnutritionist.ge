@@ -108,4 +108,17 @@ $c-archive: #fdd977;
   --checker-color-disabled: #{$c-gray-200};
   --checkbox-br-sm: 4px;
   --checkbox-br-md: 6px;
+  @media (max-width: 1440px) {
+    --fs-md: 14px;
+    --fs-lg: 16px;
+    --fs-xl: 22px;
+    --fs-2xl: 34px;
+    --fs-3xl: 54px;
+  }
+  @media (max-width: 1366px) {
+    --fs-lg: 14px;
+    --fs-xl: 20px;
+    --fs-2xl: 30px;
+    --fs-3xl: 48px;
+  }
 }
