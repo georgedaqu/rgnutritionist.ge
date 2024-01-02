@@ -1,0 +1,39 @@
+header {
+  padding: 70px 0;
+  .container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    .header_left {
+      .burger_trigger {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        width: 30px;
+        cursor: pointer;
+        div {
+          height: 3px;
+          background-color: $c-gray-500;
+          border-radius: 2px;
+          &:nth-child(2) {
+            width: 80%;
+          }
+          &:nth-child(3) {
+            width: 60%;
+          }
+        }
+        &:hover {
+          div {
+            &:nth-child(2) {
+              width: 100%;
+            }
+            &:nth-child(3) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

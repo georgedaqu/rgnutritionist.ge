@@ -50,14 +50,8 @@
 }
 // Container
 .container {
-  width: 1420px;
+  width: 1200px;
   margin: 0 auto;
-  @media (max-width: 1680px) {
-    width: 1300px;
-  }
-  @media (max-width: 1440px) {
-    width: 1240px;
-  }
   @media (max-width: 1366px) {
     width: 1120px;
   }
