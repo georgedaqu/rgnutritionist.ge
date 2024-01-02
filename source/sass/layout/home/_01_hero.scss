@@ -1,71 +1,108 @@
-.hero {
-  margin: 5vw 0;
-  padding-top: 40%;
-  background-color: $c-gray-25;
-  .hero_content {
-    position: absolute;
-    width: 30%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -100%);
-    z-index: 3;
-    figure {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 7%;
-      img {
-        width: 59%;
+.hero_wrap {
+  padding: 1px;
+  overflow: hidden;
+  .hero {
+    margin: 5vw 0;
+    padding-top: 40%;
+    background-color: $c-gray-25;
+    @media (max-width: 1024px) {
+      height: 60vh;
+      padding-top: 0;
+    }
+    * {
+      transition: all 0.3s ease-out;
+    }
+    .hero_content {
+      position: absolute;
+      width: 30%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -100%);
+      z-index: 3;
+      @media (max-width: 1024px) {
+        width: 340px;
+        transform: translate(-50%, -60%);
+      }
+      figure {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 7%;
+        @media (max-width: 1024px) {
+          margin-bottom: 20px;
+        }
+        img {
+          height: 6vw;
+          @media (max-width: 1024px) {
+            height: 60px;
+          }
+        }
+      }
+      .hero_text {
+        color: $c-gray-500;
+        font-size: 1vw;
+        text-align: center;
+        font-weight: 350;
+        @media (max-width: 1366px) {
+          font-size: 18px;
+        }
+        @media (max-width: 1024px) {
+          font-size: 16px;
+        }
       }
     }
-    .text {
-      color: $c-gray-500;
-      font-size: 1vw;
-      text-align: center;
-      font-weight: 350;
-    }
-  }
-  .vegan {
-    position: absolute;
-    z-index: 2;
-    &.one {
-      width: 20.6%;
-      left: 16%;
-      top: 8%;
-    }
-    &.two {
-      width: 10.5%;
-      left: 4%;
-      top: 49%;
-    }
-    &.three {
-      width: 12.5%;
-      left: 23%;
-      top: 55%;
-    }
-    &.four {
-      width: 9%;
-      left: 59%;
-      top: 3%;
-    }
-    &.five {
-      width: 14%;
-      left: 77%;
-      top: 10%;
-    }
-    &.six {
-      width: 11%;
-      left: 40%;
-      top: 66%;
-    }
-    &.seven {
-      width: 25%;
-      left: 60%;
-      top: 41%;
-    }
-    &.eight {
-      width: 8%;
-      left: 84%;
-      top: 58%;
+    .vegan {
+      position: absolute;
+      z-index: 2;
+      &.one {
+        width: 20.6%;
+        left: 16%;
+        top: 8%;
+      }
+      &.two {
+        width: 10.5%;
+        left: 4%;
+        top: 49%;
+      }
+      &.three {
+        width: 12.5%;
+        left: 23%;
+        top: 55%;
+        @media (max-width: 1024px) {
+          top: 72%;
+        }
+      }
+      &.four {
+        width: 9%;
+        left: 59%;
+        top: 3%;
+        @media (max-width: 1024px) {
+          left: 55%;
+          top: 18%;
+        }
+      }
+      &.five {
+        width: 14%;
+        left: 77%;
+        top: 10%;
+      }
+      &.six {
+        width: 11%;
+        left: 40%;
+        top: 66%;
+      }
+      &.seven {
+        width: 25%;
+        left: 60%;
+        top: 41%;
+        @media (max-width: 1024px) {
+          top: 70%;
+        }
+      }
+      &.eight {
+        width: 8%;
+        left: 84%;
+        top: 58%;
+      }
     }
   }
 }
