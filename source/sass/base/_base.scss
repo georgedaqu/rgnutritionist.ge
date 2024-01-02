@@ -192,7 +192,9 @@
   left: 0;
   width: 100%;
   user-select: none;
+  z-index: 1;
   &.top {
+    display: none;
     top: 0;
     transform: translateY(calc(-100% + 2px));
   }
