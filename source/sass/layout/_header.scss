@@ -35,5 +35,29 @@ header {
         }
       }
     }
+    .logo {
+      display: flex;
+      justify-content: center;
+    }
+    .header_right {
+      display: flex;
+      justify-content: flex-end;
+      .lang {
+        @extend .no-list;
+        li {
+          a {
+            @extend .flex;
+            width: 48px;
+            height: 48px;
+            border: 1px solid $c-brown;
+            border-radius: 50%;
+            &:hover {
+              background-color: $c-brown;
+              color: $c-white;
+            }
+          }
+        }
+      }
+    }
   }
 }

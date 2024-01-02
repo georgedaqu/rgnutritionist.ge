@@ -1,15 +1,50 @@
 // Main menu
 .menu_wrap {
-  @extend .trans-2;
+  @extend .trans-5;
   position: fixed;
   width: 30vw;
   height: 100vh;
   left: 0;
   top: 0;
-  padding: 40px;
+  padding: 5vw;
   transform: translateX(-100%);
   z-index: 999;
   background-color: $c-gray-50;
+  &.active {
+    transform: translateX(0);
+    box-shadow: 0 0 30px rgba($c-black, 0.1);
+  }
+  .close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      left: 50%;
+      top: 50%;
+      background-color: $c-gray-400;
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &:hover {
+      &:before,
+      &:after {
+        background-color: $c-primary-200;
+      }
+    }
+  }
   .navigation {
     > ul {
       @extend .no-list;

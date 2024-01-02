@@ -1,4 +1,5 @@
 <?php
+
 /**
  * RG Nutritionist functions and definitions
  *
@@ -20,8 +21,6 @@ $rg_nutritionist_includes = array(
 );
 
 // Include files
-foreach($rg_nutritionist_includes as $file){
+foreach ($rg_nutritionist_includes as $file) {
 	require_once $rg_nutritionist_inc_dir . $file;
 }
-
-?>

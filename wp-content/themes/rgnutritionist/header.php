@@ -8,6 +8,8 @@
   <?php wp_head(); ?>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/scripts/swiper/swiper.css">
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.svg">
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/jquery.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/custom.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/scripts/swiper/swiper.js"></script>
 </head>
 
@@ -23,8 +25,9 @@
       'menu_class'      => 'nav'
     ]);
     ?>
+    <div class="close"></div>
   </div>
-  <header>
+  <header class="trans-all-2">
     <div class="container">
       <div class="header_left">
         <div class="burger_trigger trans-all-2">
@@ -35,7 +38,7 @@
       </div>
       <div class="logo">
         <a href="<?php echo get_home_url(); ?>" title="<?php bloginfo(); ?>">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="logo">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo(); ?>">
         </a>
       </div>
       <div class="header_right">
