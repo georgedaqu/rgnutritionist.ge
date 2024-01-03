@@ -52,12 +52,12 @@
   });
 </script>
 
-<section class="front_about trans-all-2">
+<section class="front_about">
   <div class="container">
     <div class="about_content">
       <h2><?php echo get_field("about_title"); ?></h2>
       <div class="about_text"><?php echo get_field("about_text"); ?></div>
-      <div class="more">
+      <div class="more trans-all-2">
         <?php
         $about_link = get_field("about_link");
         ?>
@@ -70,6 +70,52 @@
     <figure>
       <img src="<?php echo get_field("about_image"); ?>" alt="">
     </figure>
+  </div>
+</section>
+
+<?php
+$args = [
+  'post_type' => 'service',
+  'post_status' => 'publish',
+  'posts_per_page' => -1,
+  'order' => 'DESC',
+  'orderby' => 'date',
+];
+?>
+<?php $query = new WP_Query($args); ?>
+
+<?php $posts = $query->get_posts(); ?>
+
+<section class="front_services">
+  <div class="container">
+    <?php foreach ($posts as $post) : ?>
+      <?php
+      $postId = $post->ID;
+      $image = get_the_post_thumbnail_url($postId, 'services-listing');
+      $title = get_the_title($postId);
+      ?>
+      <article class="trans-all-2">
+        <figure>
+          <a href="#" title="ინდივიდუალური კონსულტაცია">
+            <img src="<?php echo $image; ?>" alt="ინდივიდუალური კონსულტაცია">
+          </a>
+        </figure>
+        <div class="front_services_text">
+          <h2>
+            <a href="" title="ინდივიდუალური კონსულტაცია">ინდივიდუალური კონსულტაცია</a>
+          </h2>
+          <div class="text">
+            <p>დაბალანსებული კვება დაგეხმარება გახდეთ მეტად პროდუქტიული, გაიუმჯობესოთ ჯანმრთელობა და ცხოვრების ხარისხი!</p>
+          </div>
+          <div class="more trans-all-2">
+            <a href="<?php echo $link['url']; ?>" title="<?php echo $link['title']; ?>" class="btn btn-light btn-icon-right">
+              <span><?php echo $link['title']; ?></span>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
+            </a>
+          </div>
+        </div>
+      </article>
+    <?php endforeach; ?>
   </div>
 </section>
 
