@@ -22,32 +22,8 @@
 </section>
 
 <script>
-  (function($) {
-    $.fn.extend({
-      jParallax: function(opt) {
-        var defaults = {
-            moveFactor: 5,
-            targetContainer: 'body'
-          },
-          o = $.extend(defaults, opt);
-        return this.each(function() {
-          var background = $(this);
-          $(o.targetContainer).on('mousemove', function(e) {
-            mouseX = e.pageX;
-            mouseY = e.pageY;
-            windowWidth = $(window).width();
-            windowHeight = $(window).height();
-            percentX = (0 - ((mouseX / windowWidth) * o.moveFactor) - (o.moveFactor / 2) + o.moveFactor) / 2;
-            percentY = (0 - ((mouseY / windowHeight) * o.moveFactor) - (o.moveFactor / 2) + o.moveFactor) / 2;
-            background[0].style.transform = "translate(" + percentX + "%," + percentY + "%)";
-          });
-        });
-      }
-    });
-  }(jQuery));
-
   $('.one, .two, .three, .four, .five, .six, .seven, .eight, .hero_title, .hero_text').jParallax({
-    moveFactor: 50,
+    moveFactor: 10,
     targetContainer: '.hero'
   });
 </script>
@@ -123,33 +99,40 @@ $args = [
 </section>
 
 <section class="front_collaboration">
-  <h2>კოლაბორაცია</h2>
-  <figure class="bean one">
+  <h2 class="collab_title">კოლაბორაცია</h2>
+  <figure class="bean first">
     <img src="<?php echo get_template_directory_uri(); ?>/images/bean-1.png" alt="">
     <figcaption>პროდუქტიის საზოგადოებისთვის გაცნობა და სარგებელის გაზიარება</figcaption>
   </figure>
-  <figure class="bean two">
+  <figure class="bean second">
     <img src="<?php echo get_template_directory_uri(); ?>/images/bean-2.png" alt="">
     <figcaption>პროდუქტის შექმნა/ცვლილებაზე კონსულტაცია</figcaption>
   </figure>
-  <figure class="bean three">
+  <figure class="bean third">
     <img src="<?php echo get_template_directory_uri(); ?>/images/bean-3.png" alt="">
     <figcaption>პროდუქტის შექმნა/ცვლილებაზე კონსულტაცია</figcaption>
   </figure>
-  <div class="more trans-all-2">
+  <div class="veg-more trans-all-2">
     <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
       <span><?php pll_e('Read more'); ?></span>
       <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
     </a>
   </div>
-  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-2.png" alt="" class="vegan one">
-  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-2.png" alt="" class="vegan two">
-  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-5.png" alt="" class="vegan three">
-  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-4.png" alt="" class="vegan four">
-  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-5.png" alt="" class="vegan five">
-  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-6.png" alt="" class="vegan six">
-  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-6.png" alt="" class="vegan seven">
-  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-8.png" alt="" class="vegan eight">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-2.png" alt="" class="vegan veg-one">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-2.png" alt="" class="vegan veg-two">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-5.png" alt="" class="vegan veg-three">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-4.png" alt="" class="vegan veg-four">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-5.png" alt="" class="vegan veg-five">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-6.png" alt="" class="vegan veg-six">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-6.png" alt="" class="vegan veg-seven">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-8.png" alt="" class="vegan veg-eight">
 </section>
+
+<script>
+  $('.veg-one, .veg-two, .veg-three, .veg-four, .veg-five, .veg-six, .veg-seven, .veg-eight, .collab_title, .first, .second, .third, .veg-more').jParallax({
+    moveFactor: 10,
+    targetContainer: '.front_collaboration'
+  });
+</script>
 
 <?php get_footer(); ?>

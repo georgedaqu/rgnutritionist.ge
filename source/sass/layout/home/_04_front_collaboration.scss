@@ -1,5 +1,8 @@
 .front_collaboration {
   padding-top: 62.5%;
+  * {
+    transition: all 0.3s ease-out;
+  }
   h2 {
     position: absolute;
     left: 42%;
@@ -13,6 +16,18 @@
     position: absolute;
     width: 26vw;
     z-index: 2;
+    &.first {
+      left: 22%;
+      top: 11%;
+    }
+    &.second {
+      left: 52%;
+      top: 25%;
+    }
+    &.third {
+      left: 29%;
+      top: 52%;
+    }
     img {
       width: 100%;
       z-index: 1;
@@ -29,18 +44,6 @@
       text-align: center;
       z-index: 2;
     }
-    &.one {
-      left: 22%;
-      top: 11%;
-    }
-    &.two {
-      left: 52%;
-      top: 25%;
-    }
-    &.three {
-      left: 29%;
-      top: 52%;
-    }
   }
   .more {
     position: absolute;
@@ -51,42 +54,42 @@
   .vegan {
     position: absolute;
     z-index: 3;
-    &.one {
+    &.veg-one {
       width: 10.5%;
       left: 13%;
       top: 0%;
     }
-    &.two {
+    &.veg-two {
       width: 10.5%;
       left: 63.5%;
       top: 61%;
     }
-    &.three {
+    &.veg-three {
       width: 14%;
       left: 12%;
       top: 73%;
     }
-    &.four {
+    &.veg-four {
       width: 9%;
       left: 20%;
       top: 40%;
     }
-    &.five {
+    &.veg-five {
       width: 14%;
       left: 69%;
       top: 2%;
     }
-    &.six {
+    &.veg-six {
       width: 11%;
       left: 4%;
       top: 30%;
     }
-    &.seven {
+    &.veg-seven {
       width: 11%;
       left: 77%;
       top: 81%;
     }
-    &.eight {
+    &.veg-eight {
       width: 8%;
       left: 85%;
       top: 36%;
