@@ -4,12 +4,12 @@ body {
   font-size: var(--fs-lg);
   font-family: var(--ff-georgian), var(--ff-international);
   font-weight: 350;
-  line-height: var(--lh-md);
+  line-height: var(--lh-lg);
   * {
     color: $c-gray-500;
     font-family: var(--ff-georgian), var(--ff-international);
     font-weight: 350;
-    line-height: var(--lh-md);
+    line-height: var(--lh-lg);
   }
 }
 h1,
@@ -20,36 +20,38 @@ h5,
 h6 {
   @extend .sf;
   font-weight: 700;
+  line-height: var(--lh-md);
 }
 h1 {
-  font-size: var(--fs-3xl);
   margin-top: 0.83em;
   margin-bottom: 0.83em;
+  font-size: var(--fs-3xl);
 }
 h2 {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  color: $c-brown;
   font-size: var(--fs-2xl);
-  margin-top: 0.83em;
-  margin-bottom: 0.83em;
 }
 h3 {
-  font-size: var(--fs-xl);
   margin-top: 1em;
   margin-bottom: 1em;
+  font-size: var(--fs-xl);
 }
 h4 {
-  font-size: var(--fs-lg);
   margin-top: 1.33em;
   margin-bottom: 1.33em;
+  font-size: var(--fs-lg);
 }
 h5 {
-  font-size: var(--fs-md);
   margin-top: 1.67em;
   margin-bottom: 1.67em;
+  font-size: var(--fs-md);
 }
 h6 {
-  font-size: var(--fs-sm);
   margin-top: 2.33em;
   margin-bottom: 2.33em;
+  font-size: var(--fs-sm);
 }
 p {
   margin-bottom: 1rem;

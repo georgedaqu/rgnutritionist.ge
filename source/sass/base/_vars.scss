@@ -67,6 +67,7 @@ $c-archive: #fdd977;
   --lh-xs: 110%;
   --lh-sm: 120%;
   --lh-md: 140%;
+  --lh-lg: 160%;
   // Box Shadow
   --bs-sm: 0px 10px 20px #{$c-black}05;
   --bs-md: 0px 10px 15px -5px #{$c-black}10, 0px 5px 5px #{$c-black}05;
@@ -121,5 +122,11 @@ $c-archive: #fdd977;
     --fs-xl: 20px;
     --fs-2xl: 30px;
     --fs-3xl: 48px;
+  }
+  @media (max-width: 1280px) {
+    --fs-lg: 16px;
+    --fs-xl: 18px;
+    --fs-2xl: 26px;
+    --fs-3xl: 42px;
   }
 }
