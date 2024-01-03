@@ -123,8 +123,25 @@ $args = [
 </section>
 
 <section class="front_collaboration">
-  <img src="<?php echo get_template_directory_uri(); ?>/images/shpar.png" alt="" class="shpar">
   <h2>კოლაბორაცია</h2>
+  <figure class="bean one">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/bean-1.png" alt="">
+    <figcaption>პროდუქტიის საზოგადოებისთვის გაცნობა და სარგებელის გაზიარება</figcaption>
+  </figure>
+  <figure class="bean two">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/bean-2.png" alt="">
+    <figcaption>პროდუქტის შექმნა/ცვლილებაზე კონსულტაცია</figcaption>
+  </figure>
+  <figure class="bean three">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/bean-3.png" alt="">
+    <figcaption>პროდუქტის შექმნა/ცვლილებაზე კონსულტაცია</figcaption>
+  </figure>
+  <div class="more trans-all-2">
+    <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
+      <span><?php pll_e('Read more'); ?></span>
+      <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
+    </a>
+  </div>
   <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-2.png" alt="" class="vegan one">
   <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-2.png" alt="" class="vegan two">
   <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-5.png" alt="" class="vegan three">
