@@ -1,0 +1,59 @@
+.front_collaboration {
+  .shpar {
+    width: 100%;
+    opacity: 0.3;
+  }
+  h2 {
+    position: absolute;
+    left: 42%;
+    top: 0%;
+    color: $c-gray-700;
+    font-size: 3.4vw;
+    font-weight: 100;
+    z-index: 2;
+  }
+  .vegan {
+    position: absolute;
+    z-index: 3;
+    &.one {
+      width: 10.5%;
+      left: 13%;
+      top: 0%;
+    }
+    &.two {
+      width: 10.5%;
+      left: 63.5%;
+      top: 61%;
+    }
+    &.three {
+      width: 14%;
+      left: 12%;
+      top: 73%;
+    }
+    &.four {
+      width: 9%;
+      left: 20%;
+      top: 40%;
+    }
+    &.five {
+      width: 14%;
+      left: 69%;
+      top: 2%;
+    }
+    &.six {
+      width: 11%;
+      left: 4%;
+      top: 30%;
+    }
+    &.seven {
+      width: 11%;
+      left: 77%;
+      top: 81%;
+    }
+    &.eight {
+      width: 8%;
+      left: 85%;
+      top: 36%;
+    }
+  }
+}

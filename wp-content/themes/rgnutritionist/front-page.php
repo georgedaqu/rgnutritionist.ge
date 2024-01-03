@@ -122,4 +122,17 @@ $args = [
   </div>
 </section>
 
+<section class="front_collaboration">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/shpar.png" alt="" class="shpar">
+  <h2>კოლაბორაცია</h2>
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-2.png" alt="" class="vegan one">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-2.png" alt="" class="vegan two">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-5.png" alt="" class="vegan three">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-4.png" alt="" class="vegan four">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-5.png" alt="" class="vegan five">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-6.png" alt="" class="vegan six">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-6.png" alt="" class="vegan seven">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/vegan-8.png" alt="" class="vegan eight">
+</section>
+
 <?php get_footer(); ?>
