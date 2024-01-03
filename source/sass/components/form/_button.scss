@@ -39,12 +39,15 @@ a {
       }
     }
     &.btn-light {
-      color: $c-primary-200;
       background-color: transparent;
       border: var(--button-border);
+      span {
+        color: $c-gray-500;
+        font-weight: 700;
+      }
       svg {
         path {
-          stroke: $c-primary-200;
+          stroke: $c-gray-500;
         }
       }
       &:hover {

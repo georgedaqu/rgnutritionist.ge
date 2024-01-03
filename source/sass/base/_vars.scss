@@ -59,7 +59,7 @@ $c-archive: #fdd977;
   --fs-xs: 12px;
   --fs-sm: 14px;
   --fs-md: 16px;
-  --fs-lg: 18px;
+  --fs-lg: 22px;
   --fs-xl: 24px;
   --fs-2xl: 42px;
   --fs-3xl: 64px;
@@ -77,14 +77,15 @@ $c-archive: #fdd977;
   --br-tooltip: 8px;
   --br-md: 10px;
   --br-lg: 20px;
+  --br-xl: 30px;
   --br-half: 50%;
   // Form
   --form-height: 50px;
   --form-font-size: var(--fs-sm);
   // Button
-  --button-padding-x: 30px;
-  --button-padding-alt: 25px;
-  --button-border: 1px solid #{$c-primary-200};
+  --button-padding-x: 24px;
+  --button-padding-alt: 20px;
+  --button-border: 1px dashed #{$c-gray-500};
   --button-icon-margin: 10px;
   --button-outline-size: 1px;
   --button-outline-offset: 2px;
@@ -98,7 +99,7 @@ $c-archive: #fdd977;
   --input-border-hover: #{$c-gray-400};
   --input-border-active: #{$c-gray-400};
   --input-border-disabled: #{$c-gray-100};
-  --input-border-radius: var(--br-sm);
+  --input-border-radius: var(--br-xl);
   // Input Text
   --input-text-bottom-border: 1px solid #{$c-gray-300};
   // Input Checker
@@ -110,13 +111,13 @@ $c-archive: #fdd977;
   --checkbox-br-md: 6px;
   @media (max-width: 1440px) {
     --fs-md: 14px;
-    --fs-lg: 16px;
+    --fs-lg: 20px;
     --fs-xl: 22px;
     --fs-2xl: 34px;
     --fs-3xl: 54px;
   }
   @media (max-width: 1366px) {
-    --fs-lg: 14px;
+    --fs-lg: 18px;
     --fs-xl: 20px;
     --fs-2xl: 30px;
     --fs-3xl: 48px;
