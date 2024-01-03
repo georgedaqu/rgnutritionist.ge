@@ -18,6 +18,7 @@ $rg_nutritionist_includes = array(
 	'/enqueue.php',
 	'/menus.php',
 	'/blocks.php',
+	'/translations.php',
 );
 
 // Include files

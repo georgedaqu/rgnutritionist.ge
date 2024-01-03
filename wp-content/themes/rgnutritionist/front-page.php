@@ -87,29 +87,32 @@ $args = [
 <?php $posts = $query->get_posts(); ?>
 
 <section class="front_services">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/worm-tall.svg" class="worm" alt="">
   <div class="container">
     <?php foreach ($posts as $post) : ?>
       <?php
       $postId = $post->ID;
       $image = get_the_post_thumbnail_url($postId, 'services-listing');
       $title = get_the_title($postId);
+      $excerpt = get_the_excerpt($postId);
+      $link = get_post_permalink($postId);
       ?>
       <article class="trans-all-2">
         <figure>
-          <a href="#" title="ინდივიდუალური კონსულტაცია">
-            <img src="<?php echo $image; ?>" alt="ინდივიდუალური კონსულტაცია">
+          <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
+            <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
           </a>
         </figure>
         <div class="front_services_text">
           <h2>
-            <a href="" title="ინდივიდუალური კონსულტაცია">ინდივიდუალური კონსულტაცია</a>
+            <a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a>
           </h2>
           <div class="text">
-            <p>დაბალანსებული კვება დაგეხმარება გახდეთ მეტად პროდუქტიული, გაიუმჯობესოთ ჯანმრთელობა და ცხოვრების ხარისხი!</p>
+            <p><?php echo $excerpt; ?></p>
           </div>
           <div class="more trans-all-2">
-            <a href="<?php echo $link['url']; ?>" title="<?php echo $link['title']; ?>" class="btn btn-light btn-icon-right">
-              <span><?php echo $link['title']; ?></span>
+            <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
+              <span><?php pll_e('Read more'); ?></span>
               <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
             </a>
           </div>
