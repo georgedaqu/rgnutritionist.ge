@@ -1,5 +1,8 @@
 .front_collaboration {
   padding-top: 62.5%;
+  @media (max-width: 768px) {
+    padding: 0 0 100px;
+  }
   * {
     transition: all 0.3s ease-out;
   }
@@ -11,22 +14,61 @@
     font-size: 3.4vw;
     font-weight: 100;
     z-index: 2;
+    @media (max-width: 768px) {
+      position: relative;
+      left: auto;
+      top: auto;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: var(--fs-3xl);
+    }
   }
   .bean {
     position: absolute;
     width: 26vw;
     z-index: 2;
+    @media (max-width: 1280px) {
+      width: 330px;
+    }
+    @media (max-width: 768px) {
+      position: relative;
+    }
     &.first {
       left: 22%;
       top: 11%;
+      @media (max-width: 1024px) {
+        left: 6%;
+      }
+      @media (max-width: 768px) {
+        left: auto;
+        top: auto;
+        margin: 0 auto 20px;
+      }
     }
     &.second {
       left: 52%;
       top: 25%;
+      @media (max-width: 1024px) {
+        left: auto;
+        right: 6%;
+      }
+      @media (max-width: 768px) {
+        right: auto;
+        top: auto;
+        margin: 0 auto 20px;
+      }
     }
     &.third {
       left: 29%;
       top: 52%;
+      @media (max-width: 1024px) {
+        left: 16%;
+      }
+      @media (max-width: 768px) {
+        left: auto;
+        top: auto;
+        margin: 0 auto 50px;
+      }
     }
     img {
       width: 100%;
@@ -43,13 +85,28 @@
       font-weight: 500;
       text-align: center;
       z-index: 2;
+      @media (max-width: 1280px) {
+        font-size: var(--fs-lg);
+      }
     }
   }
-  .more {
+  .veg-more {
     position: absolute;
     left: 53%;
     top: 83%;
     z-index: 2;
+    @media (max-width: 1024px) {
+      left: auto;
+      right: 10%;
+    }
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: auto;
+      right: auto;
+      text-align: center;
+    }
   }
   .vegan {
     position: absolute;

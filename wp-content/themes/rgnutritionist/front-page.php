@@ -22,10 +22,10 @@
 </section>
 
 <script>
-  $('.one, .two, .three, .four, .five, .six, .seven, .eight, .hero_title, .hero_text').jParallax({
-    moveFactor: 10,
-    targetContainer: '.hero'
-  });
+$('.one, .two, .three, .four, .five, .six, .seven, .eight, .hero_title, .hero_text').jParallax({
+  moveFactor: 10,
+  targetContainer: '.hero'
+});
 </script>
 
 <section class="front_about">
@@ -66,55 +66,59 @@ $args = [
   <img src="<?php echo get_template_directory_uri(); ?>/images/worm-tall.svg" class="worm" alt="">
   <div class="container">
     <?php foreach ($posts as $post) : ?>
-      <?php
+    <?php
       $postId = $post->ID;
       $image = get_the_post_thumbnail_url($postId, 'services-listing');
       $title = get_the_title($postId);
       $excerpt = get_the_excerpt($postId);
       $link = get_post_permalink($postId);
       ?>
-      <article class="trans-all-2">
-        <figure>
-          <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
-            <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
-          </a>
-        </figure>
-        <div class="front_services_text">
-          <h2>
-            <a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a>
-          </h2>
-          <div class="text">
-            <p><?php echo $excerpt; ?></p>
-          </div>
-          <div class="more trans-all-2">
-            <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
-              <span><?php pll_e('Read more'); ?></span>
-              <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
-            </a>
-          </div>
+    <article class="trans-all-2">
+      <figure>
+        <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
+          <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
+        </a>
+      </figure>
+      <div class="front_services_text">
+        <h2>
+          <a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a>
+        </h2>
+        <div class="text">
+          <p><?php echo $excerpt; ?></p>
         </div>
-      </article>
+        <div class="more trans-all-2">
+          <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
+            <span><?php pll_e('Read more'); ?></span>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
+          </a>
+        </div>
+      </div>
+    </article>
     <?php endforeach; ?>
+    <?php wp_reset_postdata(); ?>
   </div>
 </section>
 
 <section class="front_collaboration">
-  <h2 class="collab_title">კოლაბორაცია</h2>
+  <h2 class="collab_title"><?php pll_e('Collaboration'); ?></h2>
   <figure class="bean first">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/bean-1.png" alt="">
-    <figcaption>პროდუქტიის საზოგადოებისთვის გაცნობა და სარგებელის გაზიარება</figcaption>
+    <img src="<?php echo get_field("collab_image_one"); ?>" alt="">
+    <figcaption><?php echo get_field("collab_title_one"); ?></figcaption>
   </figure>
   <figure class="bean second">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/bean-2.png" alt="">
-    <figcaption>პროდუქტის შექმნა/ცვლილებაზე კონსულტაცია</figcaption>
+    <img src="<?php echo get_field("collab_image_two"); ?>" alt="">
+    <figcaption><?php echo get_field("collab_title_two"); ?></figcaption>
   </figure>
   <figure class="bean third">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/bean-3.png" alt="">
-    <figcaption>პროდუქტის შექმნა/ცვლილებაზე კონსულტაცია</figcaption>
+    <img src="<?php echo get_field("collab_image_three"); ?>" alt="">
+    <figcaption><?php echo get_field("collab_title_three"); ?></figcaption>
   </figure>
   <div class="veg-more trans-all-2">
-    <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
-      <span><?php pll_e('Read more'); ?></span>
+    <?php
+    $collab_link = get_field("collab_link");
+    ?>
+    <a href="<?php echo $collab_link['url']; ?>" title="<?php echo $collab_link['title']; ?>" class="btn btn-light btn-icon-right">
+      <span><?php echo $collab_link['title']; ?></span>
       <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
     </a>
   </div>
@@ -129,10 +133,10 @@ $args = [
 </section>
 
 <script>
-  $('.veg-one, .veg-two, .veg-three, .veg-four, .veg-five, .veg-six, .veg-seven, .veg-eight, .collab_title, .first, .second, .third, .veg-more').jParallax({
-    moveFactor: 10,
-    targetContainer: '.front_collaboration'
-  });
+$('.veg-one, .veg-two, .veg-three, .veg-four, .veg-five, .veg-six, .veg-seven, .veg-eight, .collab_title, .first, .second, .third, .veg-more').jParallax({
+  moveFactor: 10,
+  targetContainer: '.front_collaboration'
+});
 </script>
 
 <?php get_footer(); ?>
