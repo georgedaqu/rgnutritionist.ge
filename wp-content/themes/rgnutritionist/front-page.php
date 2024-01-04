@@ -170,22 +170,35 @@ $('.veg-one, .veg-two, .veg-three, .veg-four, .veg-five, .veg-six, .veg-seven, .
   <img src="<?php echo get_template_directory_uri(); ?>/images/curve-lightgreen-top.svg" alt="" class="curves top">
   <img src="<?php echo get_template_directory_uri(); ?>/images/curve-lightgreen-bot.svg" alt="" class="curves bot">
   <div class="container">
-    <h2>ბლოგი</h2>
+    <h2><?php pll_e('Blog'); ?></h2>
     <div class="subtitle">
-      <a href="#" title="<?php pll_e('All articles'); ?>">
+      <a href="/blog" title="<?php pll_e('All articles'); ?>">
         <span><?php pll_e('All articles'); ?></span>
         <img src="<?php echo get_template_directory_uri(); ?>/images/link-external.svg" alt="" class="svg-icon">
       </a>
     </div>
     <div class="blog_items">
+      <?php
+      $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 1,
+      );
+      ?>
+      <?php $posts_query = new WP_Query($args); ?>
+      <?php if ($posts_query->have_posts()) : ?>
+      <?php while ($posts_query->have_posts()) : ?>
+      <?php $posts_query->the_post(); ?>
       <article>
         <figure>
-          <a href="#" title="სოიოს სოუსი - როგორ მზადდება, რა სახეობები არსებობს და რა ზეგავლენა აქვს ჯანმრთელობაზე">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-1.jpg" alt="სოიოს სოუსი - როგორ მზადდება, რა სახეობები არსებობს და რა ზეგავლენა აქვს ჯანმრთელობაზე">
+          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+            <?php the_post_thumbnail('blog-featured'); ?>
           </a>
         </figure>
-        <h3>სოიოს სოუსი - როგორ მზადდება, რა სახეობები არსებობს და რა ზეგავლენა აქვს ჯანმრთელობაზე</h3>
+        <h3><?php the_title(); ?></h3>
       </article>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+      <?php endif; ?>
     </div>
   </div>
 </div>
