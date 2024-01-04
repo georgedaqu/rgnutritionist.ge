@@ -1,10 +1,28 @@
 .partners {
   padding: 100px 0 200px;
   background-color: $c-gray-25;
+  @media (max-width: 1366px) {
+    padding: 90px 0 180px;
+  }
+  @media (max-width: 1280px) {
+    padding: 80px 0 160px;
+  }
+  @media (max-width: 1024px) {
+    padding: 70px 0 140px;
+  }
+  @media (max-width: 768px) {
+    padding: 60px 0 120px;
+  }
+  @media (max-width: 576px) {
+    padding: 50px 0 100px;
+  }
   .container {
     h2 {
       margin: 0 26% 1.5em;
       text-align: center;
+      @media (max-width: 768px) {
+        margin: 0 0 1.5em;
+      }
     }
     .partners_slider_wrap {
       .partners_slider_nav {
@@ -14,9 +32,15 @@
         transform: translateY(-50%);
         &.partners_slider_prev {
           left: 30px;
+          @media (max-width: 1280px) {
+            left: 0;
+          }
         }
         &.partners_slider_next {
           right: 30px;
+          @media (max-width: 1280px) {
+            right: 0;
+          }
         }
         svg {
           path {
@@ -33,12 +57,21 @@
       }
       .partners_slider {
         margin: 0 90px;
+        @media (max-width: 1280px) {
+          margin: 0 50px;
+        }
         .swiper-wrapper {
           .swiper-slide {
             @extend .flex;
             padding-top: 18%;
             background-color: $c-white;
             border-radius: 50%;
+            @media (max-width: 768px) {
+              padding-top: 22%;
+            }
+            @media (max-width: 576px) {
+              padding-top: 50%;
+            }
             img {
               position: absolute;
               max-width: 60%;
