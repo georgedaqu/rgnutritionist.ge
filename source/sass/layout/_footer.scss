@@ -1,0 +1,93 @@
+footer {
+  padding: 80px 0 140px;
+  background-color: $c-primary-300;
+  @media (max-width: 1366px) {
+    padding: 70px 0 120px;
+  }
+  @media (max-width: 1280px) {
+    padding: 60px 0 100px;
+  }
+  @media (max-width: 1024px) {
+    padding: 50px 0 80px;
+  }
+  * {
+    color: $c-white;
+  }
+  .container {
+    h2 {
+      margin: 0 0 50px;
+      text-align: center;
+      @media (max-width: 1366px) {
+        margin: 0 0 40px;
+      }
+      @media (max-width: 1280px) {
+        margin: 0 0 30px;
+      }
+      @media (max-width: 1024px) {
+        margin: 0 0 20px;
+      }
+    }
+    address {
+      @media (max-width: 576px) {
+        display: flex;
+        justify-content: center;
+      }
+      ul {
+        @extend .no-list;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 1024px) {
+          grid-gap: 10px;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 576px) {
+          grid-template-columns: 1fr;
+        }
+        li {
+          display: flex;
+          gap: 6px;
+          align-items: center;
+          img {
+            width: 60px;
+            @media (max-width: 1366px) {
+              width: 58px;
+            }
+            @media (max-width: 1280px) {
+              width: 56px;
+            }
+            @media (max-width: 1024px) {
+              width: 54px;
+            }
+            @media (max-width: 768px) {
+              width: 52px;
+            }
+            @media (max-width: 576px) {
+              width: 50px;
+            }
+          }
+          .contact_texts {
+            h6 {
+              margin: 0 0 4px;
+              font-weight: 500;
+              font-feature-settings: initial;
+              text-transform: none;
+              line-height: 1;
+              opacity: 0.5;
+            }
+            a {
+              color: $c-white;
+              font-weight: 500;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            span {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
