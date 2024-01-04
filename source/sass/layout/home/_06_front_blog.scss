@@ -1,0 +1,58 @@
+.front_blog {
+  padding: 100px 0;
+  background-color: $c-primary-100;
+  .container {
+    h2 {
+      margin: 0;
+      color: $c-white;
+      text-align: center;
+    }
+    .subtitle {
+      @extend .trans-all-2;
+      margin-bottom: 50px;
+      a {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+        span {
+          color: $c-white;
+          font-size: 14px;
+        }
+        &:hover {
+          gap: 10px;
+          opacity: 0.8;
+        }
+      }
+    }
+    .blog_items {
+      margin: 0 11.6%;
+      article {
+        figure {
+          @extend .trans-all-2;
+          margin-bottom: 20px;
+          a {
+            display: block;
+            border-radius: var(--br-lg);
+            overflow: hidden;
+            img {
+              width: 100%;
+            }
+            &:hover {
+              img {
+                transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+              }
+            }
+          }
+        }
+        h3 {
+          margin: 0 8%;
+          color: $c-white;
+          font-size: 30px;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

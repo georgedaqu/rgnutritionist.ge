@@ -22,10 +22,10 @@
 </section>
 
 <script>
-  $('.one, .two, .three, .four, .five, .six, .seven, .eight, .hero_title, .hero_text').jParallax({
-    moveFactor: 10,
-    targetContainer: '.hero'
-  });
+$('.one, .two, .three, .four, .five, .six, .seven, .eight, .hero_title, .hero_text').jParallax({
+  moveFactor: 10,
+  targetContainer: '.hero'
+});
 </script>
 
 <section class="front_about">
@@ -66,34 +66,34 @@ $args = [
   <img src="<?php echo get_template_directory_uri(); ?>/images/worm-tall.svg" class="worm" alt="">
   <div class="container">
     <?php foreach ($posts as $post) : ?>
-      <?php
+    <?php
       $postId = $post->ID;
       $image = get_the_post_thumbnail_url($postId, 'services-listing');
       $title = get_the_title($postId);
       $excerpt = get_the_excerpt($postId);
       $link = get_post_permalink($postId);
       ?>
-      <article class="trans-all-2">
-        <figure>
-          <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
-            <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
-          </a>
-        </figure>
-        <div class="front_services_text">
-          <h2>
-            <a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a>
-          </h2>
-          <div class="text">
-            <p><?php echo $excerpt; ?></p>
-          </div>
-          <div class="more trans-all-2">
-            <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
-              <span><?php pll_e('Read more'); ?></span>
-              <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
-            </a>
-          </div>
+    <article class="trans-all-2">
+      <figure>
+        <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
+          <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
+        </a>
+      </figure>
+      <div class="front_services_text">
+        <h2>
+          <a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a>
+        </h2>
+        <div class="text">
+          <p><?php echo $excerpt; ?></p>
         </div>
-      </article>
+        <div class="more trans-all-2">
+          <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
+            <span><?php pll_e('Read more'); ?></span>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
+          </a>
+        </div>
+      </div>
+    </article>
     <?php endforeach; ?>
     <?php wp_reset_postdata(); ?>
   </div>
@@ -133,10 +133,10 @@ $args = [
 </section>
 
 <script>
-  $('.veg-one, .veg-two, .veg-three, .veg-four, .veg-five, .veg-six, .veg-seven, .veg-eight, .collab_title, .first, .second, .third, .veg-more').jParallax({
-    moveFactor: 10,
-    targetContainer: '.front_collaboration'
-  });
+$('.veg-one, .veg-two, .veg-three, .veg-four, .veg-five, .veg-six, .veg-seven, .veg-eight, .collab_title, .first, .second, .third, .veg-more').jParallax({
+  moveFactor: 10,
+  targetContainer: '.front_collaboration'
+});
 </script>
 
 <section class="partners">
@@ -156,14 +156,38 @@ $args = [
       <div class="partners_slider swiper">
         <div class="swiper-wrapper">
           <?php foreach ($partners as $partner) : ?>
-            <div class="swiper-slide">
-              <img src="<?php echo $partner['image']; ?>" alt="">
-            </div>
+          <div class="swiper-slide">
+            <img src="<?php echo $partner['image']; ?>" alt="">
+          </div>
           <?php endforeach; ?>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<div class="front_blog">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/curve-lightgreen-top.svg" alt="" class="curves top">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/curve-lightgreen-bot.svg" alt="" class="curves bot">
+  <div class="container">
+    <h2>ბლოგი</h2>
+    <div class="subtitle">
+      <a href="#" title="<?php pll_e('All articles'); ?>">
+        <span><?php pll_e('All articles'); ?></span>
+        <img src="<?php echo get_template_directory_uri(); ?>/images/link-external.svg" alt="" class="svg-icon">
+      </a>
+    </div>
+    <div class="blog_items">
+      <article>
+        <figure>
+          <a href="#" title="სოიოს სოუსი - როგორ მზადდება, რა სახეობები არსებობს და რა ზეგავლენა აქვს ჯანმრთელობაზე">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/blog-1.jpg" alt="სოიოს სოუსი - როგორ მზადდება, რა სახეობები არსებობს და რა ზეგავლენა აქვს ჯანმრთელობაზე">
+          </a>
+        </figure>
+        <h3>სოიოს სოუსი - როგორ მზადდება, რა სახეობები არსებობს და რა ზეგავლენა აქვს ჯანმრთელობაზე</h3>
+      </article>
+    </div>
+  </div>
+</div>
 
 <?php get_footer(); ?>
