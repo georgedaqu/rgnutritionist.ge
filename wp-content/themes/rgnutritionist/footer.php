@@ -1,100 +1,85 @@
 <footer class="trans-all-2">
   <img src="<?php echo get_template_directory_uri(); ?>/images/curve-green-top.svg" alt="" class="curves top">
   <div class="container">
-    <h2>კონტაქტი</h2>
+    <h2><?php echo get_field('footer_title', 'option'); ?></h2>
     <address>
+      <?php
+      $contect_items = get_field('contact_items', 'option');
+      ?>
       <ul>
+        <?php foreach ($contect_items as $item) : ?>
         <li>
+          <?php if ($item['icon']) : ?>
           <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-contact.svg" alt="">
+            <img src="<?php echo $item['icon']; ?>" alt="">
           </figure>
+          <?php endif; ?>
           <div class="contact_texts">
-            <h6>კონუსლტაცია</h6>
-            <a href="mailto:rgnutritionist@gmail.com" title="rgnutritionist@gmail.com">rgnutritionist@gmail.com</a>
+            <?php if ($item['subtitle']) : ?>
+            <h6>
+              <?php echo $item['subtitle']; ?>
+            </h6>
+            <?php endif; ?>
+            <?php if ($item['item_type'] == "email") : ?>
+            <a href="mailto:<?php echo $item['email']; ?>" title="<?php echo $item['email']; ?>"><?php echo $item['email']; ?></a>
+            <?php endif; ?>
+            <?php if ($item['item_type'] == "phone") : ?>
+            <a href="tel:<?php echo $item['phone']; ?>" title="<?php echo $item['phone']; ?>"><?php echo $item['phone']; ?></a>
+            <?php endif; ?>
+            <?php if ($item['item_type'] == "link") : ?>
+            <?php $link = $item['link']; ?>
+            <a href="<?php echo $link['url']; ?>" title="<?php echo $link['title']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+            <?php endif; ?>
+            <?php if ($item['item_type'] == "text") : ?>
+            <span><?php echo $item['text']; ?></span>
+            <?php endif; ?>
           </div>
         </li>
-        <li>
-          <div class="contact_texts">
-            <h6>ჩაწერა</h6>
-            <a href="mailto:healthdesignbyrg@gmail.com" title="healthdesignbyrg@gmail.com">healthdesignbyrg@gmail.com</a>
-          </div>
-        </li>
-        <li>
-          <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-phone.svg" alt="">
-          </figure>
-          <div class="contact_texts">
-            <a href="tel:+995 598 75 03 74" title="+995 598 75 03 74">+995 598 75 03 74</a>
-          </div>
-        </li>
-        <li>
-          <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-location.svg" alt="">
-          </figure>
-          <div class="contact_texts">
-            <span>მისამართის ტექსტი</span>
-          </div>
-        </li>
-        <li>
-          <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-instagram.svg" alt="">
-          </figure>
-          <div class="contact_texts">
-            <a href="https://www.instagram.com/rgnutritionist/" title="Instagram" target="_blank">Instagram</a>
-          </div>
-        </li>
-        <li>
-          <figure>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-linkedin.svg" alt="">
-          </figure>
-          <div class="contact_texts">
-            <a href="https://linkedin.com/in/rgnutritionist" title="LinkedIn" target="_blank">LinkedIn</a>
-          </div>
-        </li>
+        <?php endforeach; ?>
       </ul>
     </address>
   </div>
 </footer>
 
 <script>
-  var partners_slider = new Swiper(".partners_slider", {
-    speed: 1000,
-    loop: true,
-    slidesPerView: 2,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".partners_slider_next",
-      prevEl: ".partners_slider_prev",
+var partners_slider = new Swiper(".partners_slider", {
+  speed: 1000,
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".partners_slider_next",
+    prevEl: ".partners_slider_prev",
+  },
+  breakpoints: {
+    1280: {
+      slidesPerView: 5,
+      spaceBetween: 30
     },
-    breakpoints: {
-      1280: {
-        slidesPerView: 5,
-        spaceBetween: 30
-      },
-      768: {
-        slidesPerView: 5,
-        spaceBetween: 20
-      },
-      576: {
-        slidesPerView: 4,
-        spaceBetween: 20
-      }
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 20
+    },
+    576: {
+      slidesPerView: 4,
+      spaceBetween: 20
     }
-  });
-  $('img.svg-icon').each(function() {
-    var $img = $(this);
-    var imgURL = $img.attr('src');
-    $.get(
-      imgURL,
-      function(data) {
-        var $svg = $(data).find('svg');
-        $svg = $svg.attr('class', $img.attr('class'));
-        $svg = $svg.removeAttr('xmlns:a');
-        $img.replaceWith($svg);
-      },
-      'xml'
-    );
-  });
+  }
+});
+$('img.svg-icon').each(function() {
+  var $img = $(this);
+  var imgURL = $img.attr('src');
+  $.get(
+    imgURL,
+    function(data) {
+      var $svg = $(data).find('svg');
+      $svg = $svg.attr('class', $img.attr('class'));
+      $svg = $svg.removeAttr('xmlns:a');
+      $img.replaceWith($svg);
+    },
+    'xml'
+  );
+});
 </script>
 
 <?php wp_footer(); ?>
