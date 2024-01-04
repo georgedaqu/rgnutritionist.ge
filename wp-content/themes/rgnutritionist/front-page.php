@@ -142,46 +142,24 @@ $args = [
 <section class="partners">
   <img src="<?php echo get_template_directory_uri(); ?>/images/curve-gray-top.svg" alt="" class="curves top">
   <div class="container">
-    <h2>50+ თანამშრომლობა, მათ შორის</h2>
+    <h2><?php echo get_field("partners_title"); ?></h2>
     <div class="partners_slider_wrap">
-      <a href="javascript:void(0);" title="უკან" class="partners_slider_nav partners_slider_prev">
+      <a href="javascript:void(0);" class="partners_slider_nav partners_slider_prev">
         <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-left.svg" alt="" class="svg-icon">
       </a>
-      <a href="javascript:void(0);" title="წინ" class="partners_slider_nav partners_slider_next">
+      <a href="javascript:void(0);" class="partners_slider_nav partners_slider_next">
         <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-right.svg" alt="" class="svg-icon">
       </a>
+      <?php
+      $partners = get_field("partners");
+      ?>
       <div class="partners_slider swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-1.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-2.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-3.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-4.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-5.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-1.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-2.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-3.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-4.png" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-5.png" alt="">
-          </div>
+          <?php foreach ($partners as $partner) : ?>
+            <div class="swiper-slide">
+              <img src="<?php echo $partner['image']; ?>" alt="">
+            </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
