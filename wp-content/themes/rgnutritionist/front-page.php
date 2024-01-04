@@ -22,10 +22,10 @@
 </section>
 
 <script>
-$('.one, .two, .three, .four, .five, .six, .seven, .eight, .hero_title, .hero_text').jParallax({
-  moveFactor: 10,
-  targetContainer: '.hero'
-});
+  $('.one, .two, .three, .four, .five, .six, .seven, .eight, .hero_title, .hero_text').jParallax({
+    moveFactor: 10,
+    targetContainer: '.hero'
+  });
 </script>
 
 <section class="front_about">
@@ -66,34 +66,34 @@ $args = [
   <img src="<?php echo get_template_directory_uri(); ?>/images/worm-tall.svg" class="worm" alt="">
   <div class="container">
     <?php foreach ($posts as $post) : ?>
-    <?php
+      <?php
       $postId = $post->ID;
       $image = get_the_post_thumbnail_url($postId, 'services-listing');
       $title = get_the_title($postId);
       $excerpt = get_the_excerpt($postId);
       $link = get_post_permalink($postId);
       ?>
-    <article class="trans-all-2">
-      <figure>
-        <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
-          <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
-        </a>
-      </figure>
-      <div class="front_services_text">
-        <h2>
-          <a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a>
-        </h2>
-        <div class="text">
-          <p><?php echo $excerpt; ?></p>
-        </div>
-        <div class="more trans-all-2">
-          <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
-            <span><?php pll_e('Read more'); ?></span>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
+      <article class="trans-all-2">
+        <figure>
+          <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
+            <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
           </a>
+        </figure>
+        <div class="front_services_text">
+          <h2>
+            <a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a>
+          </h2>
+          <div class="text">
+            <p><?php echo $excerpt; ?></p>
+          </div>
+          <div class="more trans-all-2">
+            <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
+              <span><?php pll_e('Read more'); ?></span>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
+            </a>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
     <?php endforeach; ?>
     <?php wp_reset_postdata(); ?>
   </div>
@@ -133,10 +133,59 @@ $args = [
 </section>
 
 <script>
-$('.veg-one, .veg-two, .veg-three, .veg-four, .veg-five, .veg-six, .veg-seven, .veg-eight, .collab_title, .first, .second, .third, .veg-more').jParallax({
-  moveFactor: 10,
-  targetContainer: '.front_collaboration'
-});
+  $('.veg-one, .veg-two, .veg-three, .veg-four, .veg-five, .veg-six, .veg-seven, .veg-eight, .collab_title, .first, .second, .third, .veg-more').jParallax({
+    moveFactor: 10,
+    targetContainer: '.front_collaboration'
+  });
 </script>
+
+<section class="partners">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/curve-gray-top.svg" alt="" class="curves top">
+  <div class="container">
+    <h2>50+ თანამშრომლობა, მათ შორის</h2>
+    <div class="partners_slider_wrap">
+      <a href="javascript:void(0);" title="უკან" class="partners_slider_nav partners_slider_prev">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-left.svg" alt="" class="svg-icon">
+      </a>
+      <a href="javascript:void(0);" title="წინ" class="partners_slider_nav partners_slider_next">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-right.svg" alt="" class="svg-icon">
+      </a>
+      <div class="partners_slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-1.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-2.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-3.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-4.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-5.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-1.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-2.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-3.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-4.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/partner-5.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <?php get_footer(); ?>

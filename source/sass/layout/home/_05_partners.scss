@@ -1,0 +1,55 @@
+.partners {
+  padding: 100px 0 200px;
+  background-color: $c-gray-25;
+  .container {
+    h2 {
+      margin: 0 26% 1.5em;
+      text-align: center;
+    }
+    .partners_slider_wrap {
+      .partners_slider_nav {
+        @extend .trans-all-2;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        &.partners_slider_prev {
+          left: 30px;
+        }
+        &.partners_slider_next {
+          right: 30px;
+        }
+        svg {
+          path {
+            stroke: $c-primary-200;
+          }
+        }
+        &:hover {
+          svg {
+            path {
+              stroke: $c-gray-700;
+            }
+          }
+        }
+      }
+      .partners_slider {
+        margin: 0 90px;
+        .swiper-wrapper {
+          .swiper-slide {
+            @extend .flex;
+            padding-top: 18%;
+            background-color: $c-white;
+            border-radius: 50%;
+            img {
+              position: absolute;
+              max-width: 60%;
+              max-height: 60%;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
