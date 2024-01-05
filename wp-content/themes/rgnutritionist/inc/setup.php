@@ -23,6 +23,7 @@ remove_image_size('2048x2048');
 add_image_size('blog-featured', 920, 550, true);
 add_image_size('services-listing', 240, 240, true);
 add_image_size('portfolio-listing', 330, 185, true);
+add_image_size('cv-listing', 90, 90, true);
 // Cropped JPG quality 100%
 add_filter('jpeg_quality', function ($arg) {
 	return 100;
