@@ -14,4 +14,16 @@ get_header();
   </div>
 </section>
 
+<section class="front_about">
+  <div class="container">
+    <div class="about_content">
+      <h2><?php echo get_field("intro_title"); ?></h2>
+      <div class="about_text"><?php echo get_field("intro_text"); ?></div>
+    </div>
+    <figure>
+      <img src="<?php echo get_field("intro_image"); ?>" alt="">
+    </figure>
+  </div>
+</section>
+
 <?php get_footer(); ?>
