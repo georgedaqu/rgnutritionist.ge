@@ -1,18 +1,74 @@
 .testimoinals {
   margin-bottom: 130px;
+  @media (max-width: 1440px) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: 1280px) {
+    margin-bottom: 70px;
+  }
+  @media (max-width: 1024px) {
+    margin-bottom: 50px;
+  }
   .container {
     display: grid;
     grid-template-columns: 860px 1fr;
     align-items: start;
+    @media (max-width: 1440px) {
+      grid-template-columns: 800px 1fr;
+    }
+    @media (max-width: 1280px) {
+      grid-template-columns: 700px 1fr;
+    }
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
     .testimonial_body {
+      @media (max-width: 1024px) {
+        order: 2;
+      }
+      @media (max-width: 576px) {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+      }
       .border {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+        line-height: 1;
         z-index: 1;
+        @media (max-width: 576px) {
+          display: none;
+        }
       }
       .quot {
         position: absolute;
         width: 100px;
         left: 60px;
         top: 100px;
+        @media (max-width: 1440px) {
+          width: 80px;
+          left: 50px;
+          top: 90px;
+        }
+        @media (max-width: 1280px) {
+          width: 60px;
+          left: 40px;
+          top: 90px;
+        }
+        @media (max-width: 1024px) {
+          width: 7vw;
+          left: 4vw;
+          top: 50%;
+          transform: translateY(-120%);
+        }
+        @media (max-width: 576px) {
+          position: relative;
+          width: 40px;
+          left: auto;
+          top: auto;
+          transform: none;
+        }
       }
       .testimonial_slider {
         position: absolute;
@@ -21,6 +77,28 @@
         top: 50%;
         transform: translateY(-30%);
         z-index: 2;
+        @media (max-width: 1440px) {
+          width: 550px;
+          left: 160px;
+          transform: translateY(-40%);
+        }
+        @media (max-width: 1280px) {
+          width: 500px;
+          left: 130px;
+          transform: translateY(-40%);
+        }
+        @media (max-width: 1024px) {
+          width: calc(100% - 20vw);
+          left: 14vw;
+        }
+        @media (max-width: 576px) {
+          position: relative;
+          width: calc(100vw - 120px);
+          left: auto;
+          top: auto;
+          margin: 0;
+          transform: none;
+        }
         .swiper-wrapper {
           .swiper-slide {
             h4 {
@@ -33,6 +111,12 @@
           gap: 10px;
           justify-content: center;
           margin-top: 10px;
+          @media (max-width: 1280px) {
+            margin-top: 0;
+          }
+          @media (max-width: 576px) {
+            margin-top: 10px;
+          }
           a {
             display: flex;
             justify-content: center;
@@ -62,6 +146,11 @@
     h2 {
       font-weight: 100;
       text-align: right;
+      @media (max-width: 1024px) {
+        order: 1;
+        margin: 0 0 30px;
+        text-align: center;
+      }
     }
   }
 }
