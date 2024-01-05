@@ -71,6 +71,40 @@ get_header();
   <?php endforeach; ?>
 </section>
 
+<section class="testimoinals">
+  <div class="container">
+    <div class="testimonial_body">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/testimonial.svg" alt="" class="border">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/quot.svg" alt="" class="quot">
+      <div class="testimonial_slider swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <p>კვება არ არის მხოლოდ ენერგია, არამედ ჯანმრთელობის, კულტურის, კომუნიკაციისა და ყოველდღიურობის დიდი ნაწილი</p>
+            <h4>- ქეთი</h4>
+          </div>
+          <div class="swiper-slide">
+            <p>დაბალანსებული კვება დაგეხმარება გახდეთ მეტად პროდუქტიული, გაიუმჯობესოთ ჯანმრთელობა და ცხოვრების ხარისხი!</p>
+            <h4>- სალომე</h4>
+          </div>
+          <div class="swiper-slide">
+            <p>კვების ბალანსი ჯანმრთელობის ერთ-ერთი საუკეთესო ინვესტიციაა თქვენი მომავლისთვის!</p>
+            <h4>- ლუკა</h4>
+          </div>
+        </div>
+        <div class="testimonial_slider_nav trans-all-2">
+          <a href="javascript:void(0);" class="testimonial_slider_prev">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-left.svg" alt="" class="svg-icon">
+          </a>
+          <a href="javascript:void(0);" class="testimonial_slider_next">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-right.svg" alt="" class="svg-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+    <h2>კმაყოფილი მომხმარებელი</h2>
+  </div>
+</section>
+
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/scripts/magnific/magnific.css">
 <script src="<?php echo get_template_directory_uri(); ?>/scripts/magnific/magnific.js"></script>
 <script>
