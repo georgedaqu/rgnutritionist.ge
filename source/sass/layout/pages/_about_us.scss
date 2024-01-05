@@ -75,12 +75,11 @@
         width: 620px;
         left: 200px;
         top: 50%;
-        transform: translateY(-30%);
+        transform: translateY(-40%);
         z-index: 2;
         @media (max-width: 1440px) {
           width: 550px;
           left: 160px;
-          transform: translateY(-40%);
         }
         @media (max-width: 1280px) {
           width: 500px;
