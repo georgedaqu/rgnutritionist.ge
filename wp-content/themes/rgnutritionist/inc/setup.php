@@ -22,6 +22,7 @@ remove_image_size('2048x2048');
 // Add custom image sizes
 add_image_size('blog-featured', 920, 550, true);
 add_image_size('services-listing', 240, 240, true);
+add_image_size('portfolio-listing', 330, 185, true);
 // Cropped JPG quality 100%
 add_filter('jpeg_quality', function ($arg) {
 	return 100;

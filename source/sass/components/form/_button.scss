@@ -43,7 +43,7 @@ a {
       border: var(--button-border);
       span {
         color: $c-gray-500;
-        font-weight: 700;
+        font-weight: 600;
       }
       svg {
         path {
@@ -68,9 +68,12 @@ a {
     &.btn-transparent {
       color: $c-primary-200;
       background-color: transparent;
+      span {
+        font-weight: 600;
+      }
       svg {
         path {
-          stroke: $c-primary-200;
+          stroke: $c-gray-500;
         }
       }
       &:hover {
