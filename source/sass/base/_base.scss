@@ -62,6 +62,13 @@
     width: auto;
     margin: 0 20px;
   }
+  &.narrow {
+    width: 900px;
+    @media (max-width: 1024px) {
+      width: auto;
+      margin: 0 20px;
+    }
+  }
 }
 .form-item {
   .input-wrap {
@@ -561,4 +568,19 @@
   margin: 0 0 1.6em;
   text-align: center;
   font-weight: 100;
+}
+.article_body {
+  margin: 250px 0;
+  @media (max-width: 1366px) {
+    margin: 200px 0;
+  }
+  @media (max-width: 1280px) {
+    margin: 150px 0;
+  }
+  @media (max-width: 1024px) {
+    margin: 100px 0;
+  }
+  @media (max-width: 768px) {
+    margin: 50px 0;
+  }
 }
