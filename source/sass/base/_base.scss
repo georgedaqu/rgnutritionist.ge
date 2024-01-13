@@ -248,141 +248,141 @@
   @media (max-width: 768px) {
     margin: 50px 0;
   }
-  .portfolio_item {
-    margin-bottom: 50px;
-    padding: 40px 0;
-    @media (max-width: 1366px) {
-      margin-bottom: 40px;
-      padding: 30px 0;
+}
+.portfolio_item {
+  margin-bottom: 50px;
+  padding: 40px 0;
+  @media (max-width: 1366px) {
+    margin-bottom: 40px;
+    padding: 30px 0;
+  }
+  @media (max-width: 1280px) {
+    margin-bottom: 30px;
+    padding: 20px 0;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .worm {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    user-select: none;
+    z-index: 1;
+  }
+  .container {
+    z-index: 2;
+    h2 {
+      margin: 0 0 40px;
+      font-weight: 100;
+      text-align: right;
+      @media (max-width: 1366px) {
+        margin: 0 0 30px;
+      }
+      @media (max-width: 1280px) {
+        margin: 0 0 20px;
+      }
+      @media (max-width: 768px) {
+        text-align: center;
+      }
     }
-    @media (max-width: 1280px) {
+    .portfolio_items {
+      display: grid;
+      grid-gap: 100px;
+      grid-row-gap: 60px;
+      grid-template-columns: repeat(3, 1fr);
       margin-bottom: 30px;
-      padding: 20px 0;
+      @media (max-width: 1366px) {
+        grid-gap: 90px;
+        grid-row-gap: 50px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 1024px) {
+        grid-gap: 30px;
+        grid-row-gap: 30px;
+        margin-bottom: 10px;
+      }
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+      article {
+        display: none;
+        figure {
+          @extend .trans-all-5;
+          a {
+            display: block;
+            padding-top: 56.25%;
+            margin-bottom: 20px;
+            img {
+              @extend .fit-cover;
+              border-radius: var(--br-lg);
+              z-index: 2;
+            }
+            &:before {
+              @extend .overlay;
+              background: url(../../images/play.svg) center center no-repeat;
+              z-index: 3;
+            }
+            &:after {
+              @extend .overlay;
+              transform: translate(-10px, 10px);
+              border: 1px dashed $c-gray-300;
+              border-radius: var(--br-lg);
+              z-index: 1;
+            }
+            &:hover {
+              &:before {
+                transform: scale(1.2);
+                opacity: 0.8;
+              }
+            }
+          }
+          figcaption {
+            @extend .sf;
+            color: $c-brown;
+            font-weight: 600;
+            text-align: center;
+          }
+        }
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          display: block;
+        }
+      }
     }
-    @media (max-width: 768px) {
-      margin-bottom: 10px;
+    .see_all {
+      display: none;
+      justify-content: center;
     }
-    &:last-child {
-      margin-bottom: 0;
-    }
+  }
+  &:nth-child(2n),
+  &.article {
     .worm {
-      position: absolute;
-      width: 90%;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      user-select: none;
-      z-index: 1;
+      transform: translateX(-50%) scaleX(-1);
     }
     .container {
-      z-index: 2;
       h2 {
-        margin: 0 0 40px;
-        font-weight: 100;
-        text-align: right;
-        @media (max-width: 1366px) {
-          margin: 0 0 30px;
-        }
-        @media (max-width: 1280px) {
-          margin: 0 0 20px;
-        }
+        text-align: left;
         @media (max-width: 768px) {
           text-align: center;
         }
       }
+    }
+  }
+  &.article {
+    .container {
       .portfolio_items {
-        display: grid;
-        grid-gap: 100px;
-        grid-row-gap: 60px;
-        grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 30px;
-        @media (max-width: 1366px) {
-          grid-gap: 90px;
-          grid-row-gap: 50px;
-          margin-bottom: 20px;
-        }
-        @media (max-width: 1024px) {
-          grid-gap: 30px;
-          grid-row-gap: 30px;
-          margin-bottom: 10px;
-        }
-        @media (max-width: 768px) {
-          grid-template-columns: 1fr;
-        }
         article {
-          display: none;
           figure {
-            @extend .trans-all-5;
             a {
-              display: block;
-              padding-top: 56.25%;
-              margin-bottom: 20px;
-              img {
-                @extend .fit-cover;
-                border-radius: var(--br-lg);
-                z-index: 2;
-              }
               &:before {
-                @extend .overlay;
-                background: url(../../images/play.svg) center center no-repeat;
-                z-index: 3;
-              }
-              &:after {
-                @extend .overlay;
-                transform: translate(-10px, 10px);
-                border: 1px dashed $c-gray-300;
-                border-radius: var(--br-lg);
-                z-index: 1;
-              }
-              &:hover {
-                &:before {
-                  transform: scale(1.2);
-                  opacity: 0.8;
-                }
-              }
-            }
-            figcaption {
-              @extend .sf;
-              color: $c-brown;
-              font-weight: 600;
-              text-align: center;
-            }
-          }
-          &:nth-of-type(1),
-          &:nth-of-type(2),
-          &:nth-of-type(3) {
-            display: block;
-          }
-        }
-      }
-      .see_all {
-        display: none;
-        justify-content: center;
-      }
-    }
-    &:nth-child(2n),
-    &.article {
-      .worm {
-        transform: translateX(-50%) scaleX(-1);
-      }
-      .container {
-        h2 {
-          text-align: left;
-          @media (max-width: 768px) {
-            text-align: center;
-          }
-        }
-      }
-    }
-    &.article {
-      .container {
-        .portfolio_items {
-          article {
-            figure {
-              a {
-                &:before {
-                  display: none;
-                }
+                display: none;
               }
             }
           }

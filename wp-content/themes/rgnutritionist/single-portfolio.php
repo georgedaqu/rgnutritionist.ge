@@ -72,4 +72,51 @@ $('.magnific').magnificPopup({
 });
 </script>
 
+
+<?php
+$current_post_id = get_the_ID();
+
+$args = [
+  'post_type' => 'portfolio',
+  'post_status' => 'publish',
+  'posts_per_page' => 3,
+  'post__not_in' => array($current_post_id),
+  'order' => 'DESC',
+  'orderby' => 'date',
+];
+?>
+<?php $query = new WP_Query($args); ?>
+
+<?php $posts = $query->get_posts(); ?>
+
+<section class="related_services">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/curve-gray-top.svg" alt="" class="curves top">
+  <div class="container">
+    <h2 class="section-title"><?php pll_e('See Also'); ?></h2>
+    <div class="portfolio_item article">
+      <div class="container">
+        <div class="portfolio_items">
+          <?php foreach ($posts as $post) : ?>
+          <?php
+            $postId = $post->ID;
+            $image = get_the_post_thumbnail_url($postId, 'portfolio-article-listing');
+            $title = get_the_title($postId);
+            $link = get_post_permalink($postId);
+            ?>
+          <article>
+            <figure>
+              <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
+                <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
+              </a>
+              <figcaption><?php echo $title; ?></figcaption>
+            </figure>
+          </article>
+          <?php endforeach; ?>
+          <?php wp_reset_postdata(); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <?php get_footer(); ?>

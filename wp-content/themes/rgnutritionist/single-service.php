@@ -48,9 +48,6 @@ $args = [
 <?php $posts = $query->get_posts(); ?>
 
 <section class="portfolio">
-  <?php
-  $portfolio_row = get_field("portfolio_row");
-  ?>
   <div class="portfolio_item article">
     <img src="<?php echo get_template_directory_uri(); ?>/images/worm-right.svg" alt="" class="worm">
     <div class="container">
@@ -123,7 +120,7 @@ $current_post_id = get_the_ID();
 $args = [
   'post_type' => 'service',
   'post_status' => 'publish',
-  'posts_per_page' => -1,
+  'posts_per_page' => 2,
   'post__not_in' => array($current_post_id),
   'order' => 'DESC',
   'orderby' => 'date',
