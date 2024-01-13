@@ -19,14 +19,28 @@
   </div>
 </section>
 
-
 <?php
+$post_slug = get_post_field('post_name', get_post());
+
+if ($post_slug == "individual-consultation") {
+  $article_category = "individual";
+} else {
+  $article_category = "corporate";
+}
+
 $args = [
   'post_type' => 'portfolio',
   'post_status' => 'publish',
   'posts_per_page' => -1,
   'order' => 'DESC',
   'orderby' => 'date',
+  'tax_query' => [
+    [
+      'taxonomy' => 'category',
+      'field'    => 'slug',
+      'terms'    => $article_category,
+    ],
+  ],
 ];
 ?>
 <?php $query = new WP_Query($args); ?>
