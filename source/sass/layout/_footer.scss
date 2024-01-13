@@ -1,6 +1,7 @@
 footer {
   padding: 80px 0 140px;
   background-color: $c-primary-300;
+  z-index: 3;
   @media (max-width: 1366px) {
     padding: 70px 0 120px;
   }
