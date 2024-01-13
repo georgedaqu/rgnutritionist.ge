@@ -583,4 +583,56 @@
   @media (max-width: 768px) {
     margin: 50px 0;
   }
+  .featured_image {
+    margin: 0 100px 50px;
+    img {
+      width: 100%;
+      border-radius: var(--br-lg);
+      z-index: 2;
+    }
+    &:after {
+      @extend .overlay;
+      transform: translate(-10px, 10px);
+      border: 1px dashed $c-gray-300;
+      border-radius: var(--br-lg);
+      z-index: 1;
+    }
+  }
+  .article_content {
+    margin-bottom: 50px;
+  }
+  .article_gallery {
+    display: grid;
+    grid-gap: 90px;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(3, 240px);
+    a {
+      height: 240px;
+      border-radius: 50%;
+      img {
+        @extend .fit-cover;
+        border-radius: 50%;
+        z-index: 2;
+      }
+      &:after {
+        @extend .overlay;
+        transform: translate(10px, 10px);
+        border: 1px dashed $c-gray-300;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      &:hover {
+        &:after {
+          border-color: $c-primary-200;
+        }
+      }
+      &.mfp-iframe {
+        &:before {
+          @extend .overlay;
+          background: url(../../images/play.svg) center center no-repeat;
+          z-index: 3;
+        }
+      }
+    }
+  }
 }

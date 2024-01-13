@@ -12,13 +12,13 @@
 <script src="<?php echo get_template_directory_uri(); ?>/scripts/magnific/magnific.js"></script>
 <section class="article_body">
   <div class="container narrow">
-    <figure>
+    <figure class="featured_image">
       <?php the_post_thumbnail('portfolio-inside'); ?>
     </figure>
     <div class="article_content">
       <?php the_content(); ?>
     </div>
-    <div class="article_gallery magnific">
+    <div class="article_gallery trans-all-2 magnific">
       <?php
       $gallery_items = get_field('gallery');
       ?>
