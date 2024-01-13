@@ -8,4 +8,5 @@ add_action('init', function () {
 	pll_register_string('see_all', 'See All');
 	pll_register_string('services', 'Services');
 	pll_register_string('portfolio', 'Portfolio');
+	pll_register_string('see_also', 'See Also');
 });

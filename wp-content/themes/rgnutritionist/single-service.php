@@ -57,20 +57,20 @@ $args = [
       <h2><?php pll_e('Portfolio'); ?></h2>
       <div class="portfolio_items">
         <?php foreach ($posts as $post) : ?>
-          <?php
+        <?php
           $postId = $post->ID;
           $image = get_the_post_thumbnail_url($postId, 'portfolio-article-listing');
           $title = get_the_title($postId);
           $link = get_post_permalink($postId);
           ?>
-          <article>
-            <figure>
-              <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
-                <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
-              </a>
-              <figcaption><?php echo $title; ?></figcaption>
-            </figure>
-          </article>
+        <article>
+          <figure>
+            <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
+              <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
+            </a>
+            <figcaption><?php echo $title; ?></figcaption>
+          </figure>
+        </article>
         <?php endforeach; ?>
         <?php wp_reset_postdata(); ?>
       </div>
@@ -87,34 +87,34 @@ $args = [
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/scripts/magnific/magnific.css">
 <script src="<?php echo get_template_directory_uri(); ?>/scripts/magnific/magnific.js"></script>
 <script>
-  $(".portfolio .portfolio_item .container .portfolio_items").each(function() {
-    var $this = $(this);
-    var $portfolio_items = $this.find("article").length;
-    if ($portfolio_items > 3) {
-      $this.next(".see_all").css({
-        "display": "flex"
-      })
-    }
-  });
-  $(".see_all").each(function() {
-    var $this = $(this);
-    $this.click(function() {
-      $this.prev(".portfolio_items").find("article").css({
-        "display": "block"
-      });
-      $this.hide();
-    });
-  });
-  if ($(".magnific_video").length) {
-    $(".magnific_video").magnificPopup({
-      disableOn: 700,
-      type: 'iframe',
-      mainClass: 'mfp-fade',
-      removalDelay: 160,
-      preloader: false,
-      fixedContentPos: false
-    });
+$(".portfolio .portfolio_item .container .portfolio_items").each(function() {
+  var $this = $(this);
+  var $portfolio_items = $this.find("article").length;
+  if ($portfolio_items > 3) {
+    $this.next(".see_all").css({
+      "display": "flex"
+    })
   }
+});
+$(".see_all").each(function() {
+  var $this = $(this);
+  $this.click(function() {
+    $this.prev(".portfolio_items").find("article").css({
+      "display": "block"
+    });
+    $this.hide();
+  });
+});
+if ($(".magnific_video").length) {
+  $(".magnific_video").magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false
+  });
+}
 </script>
 
 <?php
@@ -136,36 +136,37 @@ $args = [
 <section class="related_services">
   <img src="<?php echo get_template_directory_uri(); ?>/images/curve-gray-top.svg" alt="" class="curves top">
   <div class="container">
+    <h2 class="section-title"><?php pll_e('See Also'); ?></h2>
     <div class="services_items">
       <?php foreach ($posts as $post) : ?>
-        <?php
+      <?php
         $postId = $post->ID;
         $image = get_the_post_thumbnail_url($postId, 'services-listing');
         $title = get_the_title($postId);
         $excerpt = get_the_excerpt($postId);
         $link = get_post_permalink($postId);
         ?>
-        <article class="trans-all-2">
-          <figure>
-            <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
-              <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
-            </a>
-          </figure>
-          <div class="front_services_text">
-            <h2>
-              <a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a>
-            </h2>
-            <div class="text">
-              <p><?php echo $excerpt; ?></p>
-            </div>
-            <div class="more trans-all-2">
-              <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
-                <span><?php pll_e('Read more'); ?></span>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
-              </a>
-            </div>
+      <article class="trans-all-2">
+        <figure>
+          <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
+            <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
+          </a>
+        </figure>
+        <div class="front_services_text">
+          <h2>
+            <a href="<?php echo $link; ?>" title="<?php echo $title; ?>"><?php echo $title; ?></a>
+          </h2>
+          <div class="text">
+            <p><?php echo $excerpt; ?></p>
           </div>
-        </article>
+          <div class="more trans-all-2">
+            <a href="<?php echo $link; ?>" title="<?php pll_e('Read more'); ?>" class="btn btn-light btn-icon-right">
+              <span><?php pll_e('Read more'); ?></span>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" alt="" class="svg-icon">
+            </a>
+          </div>
+        </div>
+      </article>
       <?php endforeach; ?>
       <?php wp_reset_postdata(); ?>
     </div>
