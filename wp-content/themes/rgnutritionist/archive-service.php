@@ -23,7 +23,8 @@ $args = [
 
 <section class="front_services">
   <div class="container">
-    <?php foreach ($posts as $post) : ?>
+    <div class="services_items">
+      <?php foreach ($posts as $post) : ?>
       <?php
       $postId = $post->ID;
       $image = get_the_post_thumbnail_url($postId, 'services-listing');
@@ -52,8 +53,9 @@ $args = [
           </div>
         </div>
       </article>
-    <?php endforeach; ?>
-    <?php wp_reset_postdata(); ?>
+      <?php endforeach; ?>
+      <?php wp_reset_postdata(); ?>
+    </div>
   </div>
 </section>
 

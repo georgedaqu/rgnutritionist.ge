@@ -22,10 +22,10 @@
 </section>
 
 <script>
-  $('.one, .two, .three, .four, .five, .six, .seven, .eight, .hero_title, .hero_text').jParallax({
-    moveFactor: 10,
-    targetContainer: '.hero'
-  });
+$('.one, .two, .three, .four, .five, .six, .seven, .eight, .hero_title, .hero_text').jParallax({
+  moveFactor: 10,
+  targetContainer: '.hero'
+});
 </script>
 
 <section class="front_about">
@@ -65,14 +65,15 @@ $args = [
 <section class="front_services">
   <img src="<?php echo get_template_directory_uri(); ?>/images/worm-tall.svg" class="worm" alt="">
   <div class="container">
-    <?php foreach ($posts as $post) : ?>
+    <div class="services_items">
+      <?php foreach ($posts as $post) : ?>
       <?php
-      $postId = $post->ID;
-      $image = get_the_post_thumbnail_url($postId, 'services-listing');
-      $title = get_the_title($postId);
-      $excerpt = get_the_excerpt($postId);
-      $link = get_post_permalink($postId);
-      ?>
+        $postId = $post->ID;
+        $image = get_the_post_thumbnail_url($postId, 'services-listing');
+        $title = get_the_title($postId);
+        $excerpt = get_the_excerpt($postId);
+        $link = get_post_permalink($postId);
+        ?>
       <article class="trans-all-2">
         <figure>
           <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
@@ -94,8 +95,9 @@ $args = [
           </div>
         </div>
       </article>
-    <?php endforeach; ?>
-    <?php wp_reset_postdata(); ?>
+      <?php endforeach; ?>
+      <?php wp_reset_postdata(); ?>
+    </div>
   </div>
 </section>
 
@@ -133,10 +135,10 @@ $args = [
 </section>
 
 <script>
-  $('.veg-one, .veg-two, .veg-three, .veg-four, .veg-five, .veg-six, .veg-seven, .veg-eight, .collab_title, .first, .second, .third, .veg-more').jParallax({
-    moveFactor: 10,
-    targetContainer: '.front_collaboration'
-  });
+$('.veg-one, .veg-two, .veg-three, .veg-four, .veg-five, .veg-six, .veg-seven, .veg-eight, .collab_title, .first, .second, .third, .veg-more').jParallax({
+  moveFactor: 10,
+  targetContainer: '.front_collaboration'
+});
 </script>
 
 <section class="partners">
@@ -156,9 +158,9 @@ $args = [
       <div class="partners_slider swiper">
         <div class="swiper-wrapper">
           <?php foreach ($partners as $partner) : ?>
-            <div class="swiper-slide">
-              <img src="<?php echo $partner['image']; ?>" alt="">
-            </div>
+          <div class="swiper-slide">
+            <img src="<?php echo $partner['image']; ?>" alt="">
+          </div>
           <?php endforeach; ?>
         </div>
       </div>
@@ -186,18 +188,18 @@ $args = [
       ?>
       <?php $posts_query = new WP_Query($args); ?>
       <?php if ($posts_query->have_posts()) : ?>
-        <?php while ($posts_query->have_posts()) : ?>
-          <?php $posts_query->the_post(); ?>
-          <article>
-            <figure>
-              <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                <?php the_post_thumbnail('blog-featured'); ?>
-              </a>
-            </figure>
-            <h3><?php the_title(); ?></h3>
-          </article>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
+      <?php while ($posts_query->have_posts()) : ?>
+      <?php $posts_query->the_post(); ?>
+      <article>
+        <figure>
+          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+            <?php the_post_thumbnail('blog-featured'); ?>
+          </a>
+        </figure>
+        <h3><?php the_title(); ?></h3>
+      </article>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
       <?php endif; ?>
     </div>
   </div>
