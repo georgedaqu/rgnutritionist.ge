@@ -353,7 +353,8 @@
         justify-content: center;
       }
     }
-    &:nth-child(2n) {
+    &:nth-child(2n),
+    &.article {
       .worm {
         transform: translateX(-50%) scaleX(-1);
       }
@@ -362,6 +363,21 @@
           text-align: left;
           @media (max-width: 768px) {
             text-align: center;
+          }
+        }
+      }
+    }
+    &.article {
+      .container {
+        .portfolio_items {
+          article {
+            figure {
+              a {
+                &:before {
+                  display: none;
+                }
+              }
+            }
           }
         }
       }
