@@ -61,4 +61,40 @@
       }
     }
   }
+  &.reversed {
+    .container {
+      grid-template-columns: 460px 1fr;
+      @media (max-width: 1366px) {
+        grid-template-columns: 400px 1fr;
+      }
+      @media (max-width: 1280px) {
+        grid-template-columns: 340px 1fr;
+      }
+      @media (max-width: 1024px) {
+        grid-template-columns: 260px 1fr;
+      }
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+      .about_content {
+        order: 2;
+      }
+      figure {
+        order: 1;
+        img {
+          width: 100%;
+          border-radius: 50%;
+          z-index: 2;
+        }
+        &:before {
+          @extend .overlay;
+          transform: translate(10px, 10px);
+          background-color: $c-white;
+          border: 1px dashed $c-gray-300;
+          border-radius: 50%;
+          z-index: 1;
+        }
+      }
+    }
+  }
 }
