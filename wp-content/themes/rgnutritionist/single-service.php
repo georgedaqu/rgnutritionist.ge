@@ -22,10 +22,10 @@
 <?php
 $post_slug = get_post_field('post_name', get_post());
 
-if ($post_slug == "individual-consultation") {
-  $article_category = "individual";
-} else {
+if ($post_slug == "corporate-offers") {
   $article_category = "corporate";
+} else {
+  $article_category = "individual";
 }
 
 $args = [
@@ -46,7 +46,7 @@ $args = [
 <?php $query = new WP_Query($args); ?>
 
 <?php $posts = $query->get_posts(); ?>
-
+<?php if ($posts) : ?>
 <section class="portfolio">
   <div class="portfolio_item article">
     <img src="<?php echo get_template_directory_uri(); ?>/images/worm-right.svg" alt="" class="worm">
@@ -55,11 +55,11 @@ $args = [
       <div class="portfolio_items">
         <?php foreach ($posts as $post) : ?>
         <?php
-          $postId = $post->ID;
-          $image = get_the_post_thumbnail_url($postId, 'portfolio-article-listing');
-          $title = get_the_title($postId);
-          $link = get_post_permalink($postId);
-          ?>
+            $postId = $post->ID;
+            $image = get_the_post_thumbnail_url($postId, 'portfolio-article-listing');
+            $title = get_the_title($postId);
+            $link = get_post_permalink($postId);
+            ?>
         <article>
           <figure>
             <a href="<?php echo $link; ?>" title="<?php echo $title; ?>">
@@ -80,6 +80,7 @@ $args = [
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/scripts/magnific/magnific.css">
 <script src="<?php echo get_template_directory_uri(); ?>/scripts/magnific/magnific.js"></script>
