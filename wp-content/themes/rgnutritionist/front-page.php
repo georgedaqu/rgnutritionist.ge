@@ -48,7 +48,7 @@
     </figure>
   </div>
 </section>
-asdfasdfdf
+
 <?php
 $args = [
   'post_type' => 'services',
